@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.formcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    min-height: 100vh;
+    margin: 20px auto;
+    background-color: aliceblue;
+}
+.formcontainer h1{
+    text-transform: capitalize;
+    text-align: center;
+    background-color: green;
+    background: linear-gradient(from right to left,  #1abc94, #28d744);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-family: 'poppins', sans-serif;
+}
+.contactForm{
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: rgb(226, 240, 240);
+    width: 500px;
+    height: 400px;
+    box-shadow: 2px 1px 2px 2px #1abc94, 1px 3px 2px #28d744;
+    margin: 10px auto;
+}
+.contactForm p{
+    color: grey;
+    margin: auto 10px;
+    text-align: center;
+    font-family: 'poppins', sans-serif;
+}
+.contactForm label{
+    color: green;
+    margin-top: 60px 10px;
+    font-family: 'poppins', sans-serif;
+    margin-left: 10px;
+    
+}
+.contactForm button{
+    padding: 10px;
+}
+.contactForm input{
+    padding: 15px;
+    margin: auto;
+    border: none;
+    outline: none;
+    width: 100%
+}
+.contactForm textarea{
+    border: none;
+    outline: none;
+}
+.contactForm button{
+    background-image: linear-gradient(#1abc94,#28d744);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    text-transform: capitalize;
+    transition: all 1s ease-in-out;
+    width: 100%;
+    border-radius: 10px;
+    margin: auto 0;
+}
+.contactForm button:hover{
+    background-image: linear-gradient(aqua,green);
+    color: blue;
+
+}
+.contactForm textarea::-webkit-scrollbar{
+    display: none;
+}
+@media screen and (max-width: 720px){
+    .contactForm{
+        max-width: 400px;
+        width: 90%;
+        margin-bottom: 20px;
+        height: 400px;
+    }
+    .formcontainer{
+        min-height:650px;
+        height: 100%;
+    }
+}

@@ -1,0 +1,144 @@
+.news{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    height: 200vh;
+    background-color: aliceblue;
+    position: relative;
+    top: 130px;
+}
+.newsh1{
+    background-color: green;
+    background: linear-gradient(from right to left, #1abc94, #28d744);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    text-transform: capitalize;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    transform: translate(-50%, 50%);
+}
+.olderNews{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto 10px;
+    max-width: 600px;
+    width: 45%;
+    position: absolute;
+    top: 11%;
+    left: 5%; 
+    /* right: 50%;    */
+    transform: translate(0%, -25%);
+}
+.latNews{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto 10px;
+    max-width: 600px;
+    width: auto;
+    position: absolute;
+    top: 12%;
+    /* right: 0%; */
+    left: 50%;
+    transform: translate(0%, -25%);
+  
+}
+.olderNews h2{
+    top: 10%;
+    left: 0%;    
+    color: blue;
+    text-align: center;
+    text-decoration: underline;
+    font-family: 'poppins', sans-serif;
+    
+}
+.latNews h2{
+    top: 10%;
+    font-family: 'poppins', sans-serif;
+    left: 10%;    
+    color: #1abc94;
+    right: 10%;
+    text-align: center;
+    text-decoration: underline;
+    
+}
+
+.latNews ul li{
+    list-style: none;
+    color: green;
+    margin: 10px auto;
+    font-family: 'poppins', sans-serif;
+    
+  
+   }
+   .latNews ul li b{
+    font-family: 'poppins', sans-serif;
+    color: black;
+    opacity: 0.6;
+    font-size: 15px;
+    margin: auto 3px;
+   }
+   
+.olderNews ul li{
+    list-style: none;
+    color: green;
+    margin: 10px auto;
+    font-family: 'poppins', sans-serif;
+    
+  
+   }
+   .olderNews ul li b{
+    font-family: 'poppins', sans-serif;    
+    color: black;
+    opacity: 0.6;
+    font-size: 15px;
+    margin: auto 3px;
+   }
+   
+.dot{
+    font-size: 7px;
+    margin: 3px;
+   }
+
+   @media screen and (max-width:720px) {
+    .news{
+        position: relative;
+        top: 30px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: auto;
+        margin: auto;
+    }
+    .latNews{
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .olderNews{
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .newsh1{
+        top: 20%;
+        width: 100%;
+        font-size: 20px;
+        text-align: center;
+        left: 50%;
+        z-index: 5;
+        transform: translate(-50%,-50%);
+    }
+   }

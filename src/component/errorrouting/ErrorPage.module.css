@@ -1,0 +1,20 @@
+.errorpage{
+    background-color: aliceblue;
+    display: grid;
+    place-content: center;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
+}
+.errorpage h1{
+    text-align: center;
+    color: red;
+    opacity: 0.6;
+    background-color: grey;
+    height: auto;
+    width: 400px;
+    font-size: 22px;
+}
+.errorpage span{
+    color: blue;
+}

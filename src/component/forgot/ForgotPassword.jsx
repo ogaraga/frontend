@@ -1,0 +1,71 @@
+import styles from "./ForgotPassword.module.css";
+import Header from "../header/Header";
+import { useNavigate } from "react-router-dom";
+import { FaArrowDown } from "react-icons/fa";
+import FooterLogin from "../footer/FooterLogin";
+import { useState } from "react";
+import useLoading from "../hooks/useLoading";
+
+//fpassword components
+function ForgotPassword() {
+  const [email, setEmail] = useState("");
+  const navigate = useNavigate();
+  const [state, setState] = useState(false)
+  const [isLoading] = useLoading();
+  const baseUrl = "http://localhost:8080";
+  const options = {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+    },
+    body: JSON.stringify({ email }),
+  };
+  const handleSend = async (ev) => {
+    ev.preventDefault();
+    await fetch(`${baseUrl}/api_v1/forgot`, options)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.token || data.email) {
+          setState(isLoading)
+          setTimeout(() => {
+            alert(`Reset Link sent to ${email}.`);
+            navigate("/signin");
+          }, 3000);
+        } else {
+          setState(isLoading)
+          setTimeout(() => {
+            alert(data);            
+          setState(!isLoading)
+          }, 3000);
+        }
+      })
+      .catch((error) => alert(error.message));
+  };
+  const onChangeSend = (ev) => {
+    setEmail(ev.target.value);
+  };
+  return (
+    <>
+      <Header />
+      <div className={styles.forgotPasword}>
+        <h1>Forgot password</h1>
+        <p>
+          Send us an email to reset your password below <FaArrowDown />{" "}
+        </p>
+        <form onSubmit={handleSend}>
+          <label htmlFor="Email">Email</label>
+          <input
+            type="email"
+            name="email"
+            value={email}
+            placeholder="Enter your email eg: example@gmail.com"
+            onChange={onChangeSend}
+          />
+          <button type="submit">{state? "Sending e-mail..." : "Send"} </button>
+        </form>
+      </div>
+      <FooterLogin />
+    </>
+  );
+}
+export default ForgotPassword;

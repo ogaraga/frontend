@@ -1,0 +1,79 @@
+.paginationCards{
+    position: relative;
+    top: 500px;
+    max-width: 1000px;
+    height: 400px;
+    display: flex;
+    margin: auto ;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.span{
+    border-radius: 10px;
+    background-color: aliceblue;
+    margin: 0px auto;
+    border: 1px solid green;
+    cursor: pointer;
+    width: auto;
+}
+.span em{
+    float: right;
+    margin: 10px;
+}
+.paginationCards h2{
+    color: green;
+    margin: 30px 10px;
+    font-family: 'poppins', sans-serif;
+    font-size: 20px;
+}
+.paginationCards p{
+    line-height: 35px;
+    font-family: 'poppins', sans-serif;
+    margin: 10px;
+}
+.paginationCards .span:hover{
+    border-top-right-radius: calc(40%);
+}
+.paginationCards .span:hover em{
+    background-color: blue;
+    color: white;
+    border: 1px solid crimson;
+    border-radius: 50%;
+    padding: 5px;
+    float: left;
+}
+
+.paginationCards .span:hover h2{
+    text-decoration: underline;
+    
+}
+.mySwiper{
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 720px) {
+    .mySwiper{
+        width: 100%;
+        min-height: 900px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        
+    }
+    .paginationCards{
+        top: 200px;
+        left: 0;
+        height: 900px;
+    }
+    .paginationCards .span:hover{
+        border-top-right-radius: calc(0%);
+    }
+    .paginationCards .span:hover h2{
+        text-decoration: none;
+        
+    }
+    
+}

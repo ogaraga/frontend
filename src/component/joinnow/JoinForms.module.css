@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.join {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  max-width: 500px;
+  min-height: 100vh;
+  top: 100px;
+  left: 50%;
+  margin: 10px 0;
+  transform: translate(-50%, 0%);
+}
+.h4join {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-35%, -50%);
+  font-size: 20px;
+  opacity: 0.5;
+  margin: 10px 0;
+  width: 100%;
+  font-family: "poppins", sans-serif;
+}
+.joinform {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-direction: column;
+  margin: 30px 0;
+  max-width: 350px;
+  width: 100%;
+  height: 800px;
+  position: relative;
+}
+.joinform input {
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid grey;
+  outline: none;
+}
+.phonedob {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.phonedob input {
+  padding: 10px;
+}
+.label {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.label .dob {
+  position: absolute;
+  left: 59%;
+}
+/* styling reveal password */
+.reveal {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 37%;
+  right: 0%;
+  cursor: pointer;
+  margin: auto 10px;
+  transform: translate(0%, -23%);
+  color: rgb(6, 88, 6);
+}
+.reveal2 {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 25%;
+  right: 0%;
+  cursor: pointer;
+  margin: auto 10px;
+  transform: translate(0%, -23%);
+  color: rgb(6, 88, 6);
+}
+/* styling sign up button */
+.joinform .joinBtn {
+  padding: 10px;
+  background-image: linear-gradient(#1abc94, #28d744);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  margin-top: 10px;
+}
+.agreejoin {
+  margin: 10px 0;
+  opacity: 0.6;
+}
+.joinform .joinBtn:hover {
+  background-image: linear-gradient(darkcyan, lightcyan);
+  transition: all 1s;
+  color: green;
+  font-weight: bold;
+}
+.joinform label {
+  font-size: 23px;
+  opacity: 0.7;
+  margin-top: 20px;
+  font-family: "poppins", sans-serif;
+}
+.joinHr {
+  float: right;
+  max-width: 500px;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.lastjoin {
+  display: flex;
+  flex-direction: column;
+  margin: 15px auto;
+  margin-top: -10px;
+}
+.joinspan {
+  max-width: 500px;
+  height: auto;
+  width: 100%;
+  font-size: 18px;
+  opacity: 0.7;
+  margin-top: 10px;
+  color: green;
+  font-family: sans-serif Verdana, "Geneva", Tahoma, "poppins";
+}
+
+.joinspan a {
+  margin-left: 10px;
+  width: 100%;
+  color: green;
+  text-decoration: none;
+  font-family: "poppins", sans-serif;
+}
+.joinspan a:hover {
+  text-decoration: underline;
+  color: blue;
+}
+@media screen and (max-width: 720px) {
+  .join {
+    width: 100vw;
+    height: auto;
+  }
+  .joinform {
+    width: auto;
+    height: 850px;
+  }
+  .h4join {
+    top: 5%;
+    text-align: start;
+    margin: auto 10px;
+  }
+  .joinform label,
+  .joinform input,
+  .joinBtn {
+    margin: 5px 22px;
+  }
+  .phonedob {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin: 0 100px;
+    max-width: 200px;
+  }
+  .phonedob input {
+    width: 130px;
+  }
+  .agreejoin {
+    margin: 20px;
+    width: auto;
+  }
+  .reveal {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 41%;
+    right: 7%;
+    cursor: pointer;
+    margin: auto 10px;
+    transform: translate(0%, -23%);
+    color: rgb(6, 88, 6);
+  }
+  .reveal2 {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 30%;
+    right: 7%;
+    cursor: pointer;
+    margin: auto 10px;
+    transform: translate(0%, -23%);
+    color: rgb(6, 88, 6);
+  }
+  .reveal2:hover,
+  .reveal:hover {
+    color: tomato;
+  }
+}

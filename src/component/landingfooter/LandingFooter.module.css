@@ -1,0 +1,201 @@
+.landingContainer {
+  position: relative;
+  top: 650px;
+  right: 0;
+  left: 0;
+  background-color: #14202d;
+  min-width: 100vw;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  /* overflow-x: hidden; */
+}
+.landfooter {
+  position: relative;
+  top: 640px;
+  background-color: #14202d;
+  min-width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px auto;
+  /* overflow-x: hidden; */
+}
+
+.landfooter p {
+  margin: 10px;
+  color: white;
+  opacity: 0.7;
+}
+.ulsocial{
+display: flex;
+align-items: center;
+justify-content: center;
+margin: auto 15px;
+}
+.ulsocial li{
+  list-style: none;
+  margin: auto 10px;
+  font-size: 18px;
+  cursor: pointer;
+  color: white;
+  transition: all 1s ease-in-out;
+}
+.ulsocial li:hover{
+  color: green;
+}
+.landHr {
+  position: relative;
+  top: 660px;
+}
+/* company footer styling */
+.company {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: -45px;
+  margin-top: -90px;
+}
+.company h2 {
+  color: white;
+  margin: 15px;
+}
+.company hr {
+  width: 60px;
+}
+.company span a {
+  text-decoration: none;
+  color: white;
+  font-family: "poppins", sans-serif;
+  line-height: 2;
+  margin: 15px;
+  opacity: 0.7;
+  font-size: 15px;
+}
+.company a:hover {
+  text-decoration: underline;
+  color: green;
+}
+/* products footer styling */
+.products {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.products h2 {
+  color: white;
+  margin: 15px;
+}
+.products hr {
+  width: 60px;
+}
+.products span a {
+  text-decoration: none;
+  color: white;
+  font-family: "poppins", sans-serif;
+  line-height: 2;
+  margin: 15px;
+  opacity: 0.7;
+  font-size: 15px;
+}
+.products a:hover {
+  text-decoration: underline;
+  color: green;
+}
+/* Other-links styling section */
+
+.others {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: -70px;
+  margin-left: 35px;
+}
+.others h2 {
+  color: white;
+  margin: 15px;
+}
+.others hr {
+  width: 60px;
+}
+.others span a {
+  text-decoration: none;
+  color: white;
+  font-family: "poppins", sans-serif;
+  line-height: 2;
+  margin: 15px;
+  opacity: 0.7;
+  font-size: 15px;
+}
+.others a:hover {
+  text-decoration: underline;
+  color: green;
+}
+/* leag footer styling */
+.legal {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: -160px;
+  margin-left: 45px;
+}
+.legal h2 {
+  color: white;
+  margin: 15px;
+}
+.legal hr {
+  width: 60px;
+}
+.legal span a {
+  text-decoration: none;
+  color: white;
+  font-family: "poppins", sans-serif;
+  line-height: 2;
+  margin: 15px;
+  opacity: 0.7;
+  font-size: 15px;
+}
+.legal a:hover {
+  text-decoration: underline;
+  color: green;
+}
+
+@media screen and (max-width: 720px) {
+  .landingContainer {
+    top: 150px;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .company {
+    margin-left: 15px;
+    margin-top: 30px;
+  }
+  .others {
+    margin-left: 15px;
+    margin-top: 10px;
+  }
+  .legal {
+    margin-left: 15px;
+    margin-top: 10px;
+  }
+  .landfooter {
+    top: 138px;
+    bottom: 0px;
+    width: 100vw;
+    height: auto;
+  }
+  .landHr {
+    top:148px;
+    opacity: 0.6;
+  }
+}

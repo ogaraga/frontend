@@ -1,0 +1,116 @@
+.resetPasword{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    max-height: 200vh;
+    height: 600px;
+    background-color: aliceblue;
+    overflow: hidden;
+    position: relative;
+    
+
+}
+.resetPasword form{
+    position: absolute;
+     margin: auto;
+     top: 30px;
+    background-color: white;
+    width: 350px;
+    height: auto;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    border: 1px solid darkgreen;
+}
+.resetPasword form label{
+    color: green;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-left: 10px;
+    display: flex;
+    align-items: stretch;
+}
+.resetPasword form input{
+    padding: 10px;
+    width: auto;
+    border:1px solid green;
+    outline: none;
+    display: flex;
+    margin: 5px 10px;
+    align-items: stretch;
+    opacity: 0.7;
+}
+.resetPasword form input:where([type = 'email']){
+    background-color: grey;
+    color: aliceblue;
+ 
+}
+.resetPasword form button{
+    padding: 10px;
+    left: 16%;
+    top: 60%;
+    width: auto;
+    cursor: pointer;
+    border: none;
+    margin: 10px;
+    transition: all 1s ease-in-out;
+    background-color: lightgreen;
+    
+}
+.resetPasword form button:hover{
+    background-color: darkgreen;
+    color: white;
+    outline: none;
+}
+.resetH1{
+    background-color: darkgreen;
+    background: linear-gradient(from right to left, lightblue, teal);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    margin: 10px auto;
+    font-size: 20px;
+    font-family: 'poppins', sans-serif;
+    text-transform: capitalize;
+    position: absolute;
+    top: 13%;
+    z-index: 1;
+}
+.resetP{
+    position: absolute;
+    text-align: center;
+    top: 20%;
+    font-weight: bold;
+    opacity: 0.7;
+    color: green;
+    text-transform: capitalize;
+}
+@media screen and (max-width: 720px) {
+    .resetPasword{
+        height: 700px;
+    }
+    .resetP{
+        top: 20%;
+        text-align: center;
+        margin: auto;
+        opacity: 0.7;
+        z-index: 5;
+    }
+    .resetPasword form{
+        position: relative;
+        width: 350px;
+        height: auto;
+        top: 5%;
+    }
+    .resetPasword form input{
+       width: auto;
+    }
+    .resetPasword form button{
+       width: 100%;
+       margin: auto;
+    }
+}
