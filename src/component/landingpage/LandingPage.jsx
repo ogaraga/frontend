@@ -1,7 +1,6 @@
-import styles from "./socialCard.module.css";
+import styles from './LandingPage.module.css'
 import Avater from "../assets/socialnetworking.png";
 import Avater2 from "../assets/woman.png";
-import Avater3 from "../assets/explore_cultural_learning.png";
 import Avater4 from "../assets/chef.png";
 import Avater5 from "../assets/shopping.png";
 import Avater6 from "../assets/finance.png";
@@ -19,7 +18,7 @@ import image8 from "../assets/eight.png";
 import image9 from "../assets/nine.png";
 import image10 from "../assets/ten.png";
 import imageOf3 from "../assets/afrocentric_bg.png";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import { FaStar } from "react-icons/fa";
 import Header from "../header/Header";
 import avatabtn from "../assets/members (1).png";

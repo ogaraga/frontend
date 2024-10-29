@@ -1,7 +1,6 @@
 import {Route, Routes } from "react-router-dom";
 import "./App.css";
 import JoinNow from "./component/joinnow/JoinNow";
-import SocialCard from "./component/socialcard/SocialCard";
 import ForgotPassword from "./component/forgot/ForgotPassword";
 import Profile from "./component/profile/Profile";
 import ResetPass from "./component/resetpass/ResetPass";
@@ -10,6 +9,7 @@ import HomeProfile from "./component/profile/HomeProfile";
 import News from "./component/profile/News";
 import ContactUs from "./component/contactUs/ContactUs";
 import SignIn from './component/login/SignIn';
+import LandingPage from './component/landingpage/LandingPage'
 function App() {
   
   return (
@@ -17,7 +17,7 @@ function App() {
       <div className="App">
         <Routes>
           
-          <Route path="/" element={<SocialCard />} />
+          <Route path="/" element={<LandingPage/>} />
           <Route path="/signin" element={<SignIn/>}  />
           <Route path="/joinnow" element={<JoinNow />} />
           <Route path="/forgot" element={<ForgotPassword />} />
