@@ -38,7 +38,7 @@ function NavLogOut() {
     setToggle(!toggle);
     setActiveNavBar(activeNavBar);
   };
-  const baseUrl = "http://localhost:8080";
+  const baseUrl = "https://backends-mocha-nine.vercel.app";
   
   const options = {
     method: 'GET',
@@ -94,7 +94,7 @@ function NavLogOut() {
                     <span>Delete Account</span>{" "}
                   </button>
                   <button className={styles.menulogoutX} onClick={handleLogOut}>
-                    <span>{state ? "Logging Out..." : "LogOut"}</span>
+                    <span>{state ? "Exiting..." : "LogOut"}</span>
                   </button>
                 </div>
               </div>

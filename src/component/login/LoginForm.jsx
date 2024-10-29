@@ -16,7 +16,7 @@ function LoginForm() {
   const [handleReveal, reveal] = useRevealPassword();
   const { setUser } = useContext(userContext);
   const navigate = useNavigate();
-  const baseUrl = "http://localhost:8080";
+  const baseUrl = "https://backends-mocha-nine.vercel.app";
   const options = {
     method: "POST",
     credentials: "include",

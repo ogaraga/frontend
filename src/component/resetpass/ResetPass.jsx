@@ -28,7 +28,7 @@ function ResetPass() {
   const navigate = useNavigate();
 
   //variable declaration
-  const baseUrl = "http://localhost:8080";
+  const baseUrl = "https://backends-mocha-nine.vercel.app";
   const options = {
     method: "PUT",
     headers: {

@@ -12,7 +12,7 @@ function ForgotPassword() {
   const navigate = useNavigate();
   const [state, setState] = useState(false)
   const [isLoading] = useLoading();
-  const baseUrl = "http://localhost:8080";
+  const baseUrl = "https://backends-mocha-nine.vercel.app";
   const options = {
     method: "POST",
     headers: {

@@ -33,7 +33,7 @@ function HomeProfile() {
   const { _id, token } = useParams();
   const navigate = useNavigate();
   const [handleLogOut, state] = UseLogOut();
-  const baseUrl = "http://localhost:8080";
+  const baseUrl = "https://backends-mocha-nine.vercel.app";
   const options = {
     method: "GET",
     credentials: "include",

@@ -6,7 +6,7 @@ function UseLogOut() {
     const [state, setState] = useState(false);
     const [isLoading] = useLoading();
     const navigate =useNavigate();
-    const baseUrl = "http://localhost:8080";  
+    const baseUrl = "https://backends-mocha-nine.vercel.app";  
   
     const handleLogOut = async () => {
         await fetch(`${baseUrl}/api_v1/logout`, {
