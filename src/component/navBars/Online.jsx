@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import styles from './Navbar.module.css';
+import styles from './NavBar.module.css';
 import userContext from '../context/UserContext';
 function Online() {
     const {user} = useContext(userContext);

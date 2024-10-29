@@ -1,5 +1,5 @@
 import fatherLogo from "../assets/logo.png";
-import styles from "./Navbar.module.css";
+import styles from "./NavBar.module.css";
 import {
   FaBars,
   FaBell,
