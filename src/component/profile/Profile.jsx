@@ -11,7 +11,7 @@ function Profile() {
   const { _id, token } = useParams();
 
 
-  const baseUrl = "https://backends-mocha-nine.vercel.app";
+  const baseUrl = "https://backend-alpha-two-70.vercel.app";
 
   const navigate = useNavigate();
 

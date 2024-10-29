@@ -17,7 +17,7 @@ function ContactUs() {
   const handleChangeThem = (e) => {
     setValues((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
-  const baseUrl = "https://backends-mocha-nine.vercel.app";
+  const baseUrl = "https://backend-alpha-two-70.vercel.app/";
   const options = {
     method: "POST",
     headers: {

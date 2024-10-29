@@ -38,7 +38,7 @@ function NavLogOut() {
     setToggle(!toggle);
     setActiveNavBar(activeNavBar);
   };
-  const baseUrl = "https://backends-mocha-nine.vercel.app";
+  const baseUrl = "https://backend-alpha-two-70.vercel.app";
   
   const options = {
     method: 'GET',

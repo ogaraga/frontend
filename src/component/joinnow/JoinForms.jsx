@@ -23,7 +23,7 @@ function JoinForms() {
   const [isLoading] = useLoading();
   const [handleReveal, reveal] = useRevealPassword();
   const navigate = useNavigate();
-  const baseUrl = "https://backends-mocha-nine.vercel.app";
+  const baseUrl = "https://backend-alpha-two-70.vercel.app/";
   const options = {
     method: "POST",
     headers: {

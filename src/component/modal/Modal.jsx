@@ -8,7 +8,7 @@ function Modal() {
   const [isLoading] = useLoading();
   const [handleNo, no] = useNo();
   const { _id, token } = useParams();
-  const baseUrl = "https://backends-mocha-nine.vercel.app";
+  const baseUrl = "https://backend-alpha-two-70.vercel.app";
   
   const navigate = useNavigate();
   const handleYes = async () => {

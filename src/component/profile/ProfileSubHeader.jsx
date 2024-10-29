@@ -20,7 +20,7 @@ function ProfileSubHeader() {
   const [open, setOpen] = useState(true);
   const { _id, token } = useParams();
   const { user } = useContext(userContext);
-  const baseUrl = "https://backends-mocha-nine.vercel.app";
+  const baseUrl = "https://backend-alpha-two-70.vercel.app";
   const options = {
     method: "GET",
     credentials: "include",
