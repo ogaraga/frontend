@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+.mains {
+  min-height: 100vh;
+  height: 100%;
+}
+
 .celebrating {
   background: url("../assets//main_landing_page_bg.png");
   background-repeat: no-repeat;
@@ -60,14 +65,14 @@
 .btnjoin:hover {
   background-color: #28d744;
 }
-a{
+a {
   text-decoration: none;
   color: white;
 }
 a:hover {
   color: orange;
 }
-.Mbtn{
+.Mbtn {
   padding: 10px;
   border: none;
   outline: none;
@@ -76,7 +81,7 @@ a:hover {
   font-size: 18px;
   cursor: pointer;
 }
-.Mbtn:hover{
+.Mbtn:hover {
   text-decoration: underline;
 }
 
@@ -87,7 +92,9 @@ a:hover {
   top: 85%;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  max-width: 900px;
+  flex-flow: wrap-reverse;
+  width: 100%;
   gap: 10px;
   margin: auto;
 }
@@ -100,7 +107,7 @@ a:hover {
   align-items: center;
   flex-direction: column;
   position: relative;
-  top: 400px;
+  top: 600px;
   margin: auto;
 }
 .communities h1 {
@@ -123,19 +130,20 @@ a:hover {
   width: auto;
   height: 100%;
   position: relative;
-  top: 450px;
+  top: 600px;
   gap: 20px;
 }
-.popular h1 {
+.popular h2 {
   display: flex;
   align-items: stretch;
+  justify-content: center;
   font-family: "poppins", sans-serif;
 }
 .h1popular {
   text-align: center;
   text-transform: capitalize;
   position: relative;
-  top: 430px;
+  top: 600px;
   margin: 10px auto;
   color: rgb(0, 128, 105);
   font-family: "poppins", sans-serif;
@@ -143,8 +151,9 @@ a:hover {
 /* cards for community groups */
 .card1 {
   background-color: aliceblue;
-  width: 350px;
-  height: 400px;
+  width: 500px;
+  height: 450px;
+  margin: auto;
   padding: 10px;
   border-radius: 10px;
   transition: all 1s ease;
@@ -156,9 +165,10 @@ a:hover {
 }
 .card3 {
   background-color: aliceblue;
-  width: 350px;
-  height: 400px;
+  width: 500px;
+  height: 450px;
   padding: 10px;
+  margin: auto;
   border-radius: 10px;
   transition: all 1s ease;
   transform: scale(0.9);
@@ -171,8 +181,9 @@ a:hover {
   transition: all 1s ease;
   transform: scale(0.9);
   background-color: aliceblue;
-  width: 350px;
-  height: 400px;
+  width: 500px;
+  height: 450px;
+  margin: auto;
   padding: 10px;
   border-radius: 10px;
 }
@@ -227,9 +238,9 @@ a:hover {
   width: 100px;
   cursor: pointer;
 }
-.cardbtn:hover{
-    background-color: lightgreen;
-    color: blue;
+.cardbtn:hover {
+  background-color: lightgreen;
+  color: blue;
 }
 .card1 h2 {
   margin: 20px;
@@ -259,13 +270,14 @@ a:hover {
 .explore {
   display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
-  top: 450px;
-  left: 5%;
-  margin: 20px;
+  top: 600px;
+  margin: auto;
   border: 1px solid green;
   width: 300px;
 }
+
 .explore h2 {
   font-family: "poppins", sans-serif;
   padding: 10px;
@@ -276,9 +288,11 @@ a:hover {
   cursor: pointer;
   transition: all 1s ease;
 }
-.explore h2:hover{
-    background-color: lightgreen;
-    color: white;
+.explore {
+  background-color: lightgreen;
+}
+.explore h2:hover {
+  color: white;
 }
 /* deeply rooted */
 .deeply {
@@ -288,7 +302,7 @@ a:hover {
   flex-direction: column;
   background-color: aliceblue;
   position: relative;
-  top: 500px;
+  top: 650px;
   max-width: 100vw;
   width: auto;
   height: 300px;
@@ -296,6 +310,8 @@ a:hover {
 .deepSpan {
   position: absolute;
   top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border: 1px solid orange;
   border-radius: 10px;
   background-color: white;
@@ -318,13 +334,12 @@ a:hover {
 .socialContainer {
   background-color: aliceblue;
   position: relative;
-  top: 400px;
-  width: auto;
-  height: 650px;
+  top: 500px;
+  max-width: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-flow: wrap;
   gap: 10px;
 }
 /* social card */
@@ -437,9 +452,9 @@ a:hover {
 .social6 .imag .prod_image,
 .social7 .imag .prod_image,
 .social8 .imag .prod_image {
-position: absolute;
-right: 0;
-top: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 /* social h4 linear gradient css */
 .social .h4social,
@@ -490,251 +505,295 @@ top: 0;
 .arrowUp {
   width: 20px;
   position: absolute;
-  top: 90%;  
+  top: 90%;
   left: 40%;
 }
 /* section for one-stop community */
-.oneStopPlusImage{
-    position: relative;
-    top: 550px;
-    background: url('../assets//main_landing_page_bg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: auto 0;
+.oneStopPlusImage {
+  position: relative;
+  top: 550px;
+  background: url("../assets//main_landing_page_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto 0;
 }
-.oneStop{
-    position: relative;
-    text-transform: capitalize;
-    font-family: 'poppins', sans-serif;
+.oneStop {
+  position: relative;
+  text-transform: capitalize;
+  font-family: "poppins", sans-serif;
+  font-size: 20px;
+  word-spacing: -2px;
+  display: flex;
+  margin-left: 100px;
+  align-items: stretch;
+  justify-content: center;
+  flex-direction: column;
+}
+.oneStop h1 {
+  text-align: start;
+  font-family: "poppins", sans-serif;
+}
+.oneStop p {
+  opacity: 0.7;
+  font-family: "poppins", sans-serif;
+  margin: 10px 0;
+}
+.oneStopBtn {
+  background-color: #1abc94;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid green;
+  cursor: pointer;
+  transition: all 1s;
+  width: 200px;
+  border-radius: 10px;
+}
+.oneStopBtn:hover {
+  background-color: grey;
+  border: 1px solid blue;
+}
+.oneStopBtn a {
+  text-decoration: none;
+  color: aliceblue;
+  font-family: "poppins", sans-serif;
+}
+.oneStopBtn a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+.image3 img {
+  width: 400px;
+}
+.paginationContainer {
+  position: relative;
+  top: 650px;
+  left: 100px;
+  width: 100vw;
+  height: auto;
+  margin: auto;
+}
+.paginationHeading {
+  position: relative;
+  top: 600px;
+  left: 100px;
+  margin: auto;
+}
+.paginationHeading h1 {
+  text-align: start;
+}
+.paginationHeading h1 b {
+  background-color: green;
+  background: linear-gradient(from right to left, #1abc94, #28d744);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 10px auto;
+}
+@media screen and (max-width: 720px) {
+  .main {
+    overflow-x: hidden;
+    width: 100vw;
+    min-height: 300vh;
+    height: 100%;
+  }
+  .celebrating {
+    width: auto;
+    margin: auto;
+    overflow: hidden;
+    top: 50px;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  .celebrating h4 {
+    font-size: 15px;
+    text-align: center;
+    width: auto;
+    margin: auto 30px;
+    top: 10%;
+  }
+  .celep {
+    text-align: center;
+    width: auto;
+    font-size: 11px;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    margin: auto;
+  }
+  .btnjoin {
+    top: 50%;
+  }
+  .images {
+    display: none;
+  }
+  .communities {
+    top: -120px;
+    width: auto;
+    margin: auto 10px;
+  }
+  .communities h1 {
+    text-align: center;
+    margin: auto;
+  }
+  .communities p {
+    text-align: center;
+    margin: auto;
+    font-size: 13px;
+    opacity: 1;
+  }
+  .h1popular {
+    top: -100px;
+    text-align: center;
     font-size: 20px;
-    word-spacing: -2px;
+  }
+  .popular {
+    top: -100px;
+    width: 200px;
+    height: 100%;
+    margin: auto -50px;
     display: flex;
-    margin-left: 100px;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    gap: 5px;
+  }
+  .explore {
+    top: -80px;
+    left: 50%;
+    margin: auto 10px;
+    transform: translate(-52%, -50%);
+  }
+  .explore h2 {
+    text-align: center;
+    width: 100%;
+    opacity: 1;
+  }
+  .deeply {
+    top: -60px;
+    width: auto;
+    height: auto;
+  }
+  .deepSpan {
+    margin: auto;
+    font-weight: bold;
+    opacity: 0.7;
+  }
+  .deeply h1 {
+    top: 50px;
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+  }
+  .deeply p {
+    top: 90px;
+    text-align: center;
+    margin: auto 20px;
+    font-size: 13px;
+  }
+  .socialContainer {
+    top: 80px;
+    margin: 10px auto;
+    flex-flow: wrap;
+    max-width: 600px;
+    height: 100%;
+  }
+  .social {
+    margin: 15px auto;
+  }
+  .oneStopPlusImage {
+    top: 100px;
+    margin: 10px auto;
+    flex-direction: column;
+    gap: 25px;
+  }
+  .image3 {
+    width: auto;
+    height: 100%;
+  }
+  .paginationHeading{
+    display: flex;
     align-items: stretch;
     justify-content: center;
     flex-direction: column;
-}
-.oneStop h1{
-    text-align: start;
-    font-family: 'poppins', sans-serif;
-}
-.oneStop p{
-    opacity: 0.7;
-    font-family: 'poppins', sans-serif;
-    margin: 10px 0;
-}
-.oneStopBtn{
-    background-color: #1abc94;
-    text-align: center;
-    padding: 10px;
-    border: 1px solid green;
-    cursor: pointer;
-    transition: all 1s;
-    width: 200px;
-    border-radius: 10px;
-}
-.oneStopBtn:hover{
-    background-color: grey;    
-    border: 1px solid blue;
-  
-     
-}
-.oneStopBtn a{
-    text-decoration: none;
-    color: aliceblue;
-    font-family: 'poppins', sans-serif;
-}
-.oneStopBtn a:hover{
-    color: blue;
-    text-decoration: underline;
-}
-.image3 img{
-    width: 400px;
-}
-.paginationContainer{
     position: relative;
-    top: 550px;
-    left: 100px;
-    width: 100vw;
-    height: auto;
-    margin: auto 10px;
-}
-.paginationHeading{
-    position: relative;
-    top: 90px;
-    left: 100px;
-}
-.paginationHeading h1{
-    text-align: start;
-}
-.paginationHeading h1 b{
-    background-color:green;
-    background: linear-gradient(from right to left, #1abc94, #28d744);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin: 10px auto;
-}
-@media screen and (max-width: 720px) {
-    .main {
-        overflow-x: hidden;
-        width: 100vw;
-        min-height: 300vh;
-        height: 100%;
-      
-    }
-    .celebrating{
-        width: auto;
-        margin: auto;
-        overflow: hidden;
-        top:50px;
-        left: 50%;
-        transform: translate(-50%);
-        
-    }
-    .celebrating h4{
-        font-size: 15px;
-        text-align: center;
-        width: auto;
-        margin: auto 30px;
-        top: 10%;
-      }
-    .celep{
-        text-align: center;
-        width: auto;
-        font-size: 11px;
-        top: 35%;
-        left: 50%;
-        transform: translate(-50%,-40%);
-        margin: auto;
-    }
-    .btnjoin{
-        top: 50%;
-    }
-    .images{
-        display: none;
-    }
-    .communities{
-        top: -120px;
-        width: auto;
-        margin: auto 10px;
-        
+    top: 120px;
+  }
 
-    }
-    .communities h1{
-        text-align: center;
-        margin: auto;
-    }
-    .communities p{
-        text-align: center;
-        margin: auto;
-        font-size: 13px;
-        opacity: 1;
-    }
-    .h1popular{
-        top: -100px;
-        text-align: center;
-        font-size: 20px;
-    }
-    .popular{
-        top: -100px;
-        width: auto;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 5px;
-    }
-    .explore{
-        top: -80px;
-        left: 50%;
-        margin: auto 10px;
-        transform: translate(-52%, -50%);
-        
-    }
-    .explore h2{
-        text-align: center;
-        width: 100%;
-        opacity: 1;
-        
-    }
-    .deeply{
-        top: -90px;
-        width: auto;
-        height: auto;
-    }
-    .deepSpan{
-        margin: auto;
-        font-weight: bold;
-        opacity: 0.7;
-        
-    }
-    .deeply h1{
-        top: 50px;
-        font-size: 20px;
-        text-align: center;
-        margin: auto ;
-    }
-    .deeply p{
-        top: 90px;
-        text-align: center;
-        margin: auto 20px;
-        font-size: 13px;
-    }
-    .socialContainer{
-        top: 80px;
-        margin: 10px auto;
-        flex-wrap: wrap;
-        width: auto;
-        height: 100%;
-    }
-    .social{
-        margin: 15px auto;
-    }
-    .oneStopPlusImage{
-        top: 100px;
-        margin: 10px;
-        flex-direction: column;
-        margin: auto;
-        gap: 25px;
-    }
-    .image3{
-        width: auto;
-        height: 100%;
-    }
-    
-    .paginationHeading h1{
-        align-items: center;
-        margin: auto;
-        position: relative;
-        top: 20px;
-        left: 50%;
-        transform: translate(-50%);
-       
-    }
-    .oneStop p{
-        font-size: 13px;
-        left: 50%;
-      transform: translate(-20%);
-      text-align: center;
-    }
-    .oneStop h1{
-      text-align: center;
-      margin: auto;
-      left: 50%;
-      transform: translate(-20%);
-       font-size: 18px;
-    }
-    .oneStopBtn{
-      display: flex;
-      align-items: center;
-      justify-content: center;
-     
+  .paginationHeading h1 {
   }
-  .landFoot{
-    margin-top:200px;
+  .oneStop p {
+    font-size: 13px;
+    left: 50%;
+    transform: translate(-20%);
+    text-align: center;
   }
+  .oneStop h1 {
+    text-align: center;
+    margin: auto;
+    left: 50%;
+    transform: translate(-20%);
+    font-size: 18px;
+  }
+  .oneStopBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .landFoot {
+    margin-top: 200px;
+  }
+  .star {
+    font-size: 35px;
+    margin: 20px 30px;
+  }
+  .card3 h2,.card1 h2, .card2 h2 {
+    margin: 20px;
+    text-align: start;
+    color: rgb(0, 128, 79);
+    font-weight: bold;
+    font-family: "poppins", sans-serif;
+  }
+  .card3 p, .card1 p, .card2 p {
+    margin: 15px 30px;
+    font-size: 20px;
+    text-align: center;
+    font-family: "poppins", sans-serif;
+    color: rgb(0, 128, 79);
+  }
+  /* avater for community group */
+  .avaterbtn img {
+    width: 200px;
+    border-radius: 20px;
+    margin: auto 50px;
+  }
+  .avaterbtn {
+    display: flex;
+    margin: auto;
+    background-color: transparent;
+    gap: 1px;
+  }
+  .avaterbtns {
+    display: flex;
+    margin: auto;
+    background-color: transparent;
+    gap: 1px;
+  }
+  .avaterbtns img {
+    width: 200px;
+    border-radius: 20px;
+    margin: auto 50px;
+  }
+  .cardbtn {
+    background-color: rgb(0, 128, 79);
+    border: none;
+    border-radius: 20px;
+    padding: 5px;
+    color: white;
+    width: 100px;
+    cursor: pointer;
+    margin-left: -50px;
+  }
+  
 }
