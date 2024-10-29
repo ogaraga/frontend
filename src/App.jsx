@@ -9,8 +9,7 @@ import ErrorPage from "./component/errorrouting/ErrorPage";
 import HomeProfile from "./component/profile/HomeProfile";
 import News from "./component/profile/News";
 import ContactUs from "./component/contactUs/ContactUs";
-import SignIn from "./component/signIn/SignIn";
-SignIn
+import SignIn from './component/login/SignIn';
 function App() {
   
   return (
