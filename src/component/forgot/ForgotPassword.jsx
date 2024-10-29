@@ -12,11 +12,11 @@ function ForgotPassword() {
   const navigate = useNavigate();
   const [state, setState] = useState(false)
   const [isLoading] = useLoading();
-  const baseUrl = "https://backend-alpha-two-70.vercel.app/";
+  const baseUrl = "https://backend-alpha-two-70.vercel.app";
   const options = {
     method: "POST",
     headers: {
-      "content-type": "application/json",
+      "Content-Type": "application/json",
     },
     body: JSON.stringify({ email }),
   };

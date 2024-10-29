@@ -35,7 +35,7 @@ function Profile() {
   };
   useEffect(() => {
     profile();
-  }, []);
+  }, [_id, token]);
 
   return (
     <>
