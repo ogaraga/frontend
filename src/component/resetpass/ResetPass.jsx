@@ -52,7 +52,7 @@ function ResetPass() {
           setState(isLoading);
           setTimeout(() => {
             alert("Update successfully saved!");
-            navigate("/signin");
+            navigate("https://frontends-psi.vercel.app/signin");
           }, 3000);
         } else if (
           data ===
@@ -61,7 +61,7 @@ function ResetPass() {
           setState(isLoading);
           setTimeout(() => {
             alert(data);
-            navigate("/joinnow");
+            navigate("https://frontends-psi.vercel.app/joinnow");
           }, 3000);
         } else {
           setState(isLoading);

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import FooterLogin from '../footer/FooterLogin';
 import HomeProfile from "./HomeProfile";
-import News from "./News";
+
 
 function Profile() {
   const { _id, token } = useParams();
@@ -26,9 +26,9 @@ function Profile() {
       .then((res) => res.json())
       .then((data) => {
         if (!data.token || !data.id) {
-          return navigate("/signin");
+          return navigate("https://frontends-psi.vercel.app/signin");
         } else {
-          return navigate(`/profile/${_id}/${token}`);
+          return navigate(`https://frontends-psi.vercel.app/profile/${_id}/${token}`);
         }
       })
       .catch((err) => alert(err.message));

@@ -11,7 +11,7 @@ function News() {
   const { _id, token } = useParams();
   const navigate = useNavigate();
   const { user } = useContext(userContext);
-  const baseUrl = "http://localhost:8080";
+  const baseUrl = "https://backends-mocha-nine.vercel.app/";
   const options = {
     method: "GET",
     credentials: "include",
@@ -24,7 +24,8 @@ function News() {
     fetch(`${baseUrl}/api_v1/profile/news/${_id}/${token}`, options)
       .then((res) => res.json())
       .then((data) => {
-        if (!data.token || !data.id) return navigate("/signin");
+        if (!data.token || !data.id)
+          return navigate("https://frontends-psi.vercel.app/signin");
       })
       .catch((err) => console.log(err.message));
   }, [user]);
@@ -55,7 +56,10 @@ function News() {
             <li>
               <FaDotCircle className={styles.dot} />
               FCT:{" "}
-              <b>Wike finally nominated and appointed as the FCT minister for the first time in the history of this regional landscape.</b>
+              <b>
+                Wike finally nominated and appointed as the FCT minister for the
+                first time in the history of this regional landscape.
+              </b>
             </li>
             <li>
               <FaDotCircle className={styles.dot} />
@@ -69,7 +73,7 @@ function News() {
         </div>
         <div className={styles.latNews}>
           <h2>Latest news</h2>
-          <SwiperLatestNews/>
+          <SwiperLatestNews />
         </div>
       </div>
       <FooterLogin />

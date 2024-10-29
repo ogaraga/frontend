@@ -27,10 +27,10 @@ function Navbar() {
       <img src={fatherLogo} alt="Fatherland Logo" /></Link>
       <div className={styles.navbarbtn}>
         <button className={styles.menuLogin}>
-          <Link to="/signin">Sign in</Link>
+          <Link to="https://frontends-psi.vercel.app/signin">Sign in</Link>
         </button>
         <button className={styles.menuSignUp}>
-          <Link to="/joinnow">Sign Up</Link>
+          <Link to="https://frontends-psi.vercel.app/joinnow">Sign Up</Link>
         </button>
         {toggle ? (
           <FaBars className={styles.bars} onClick={handleBar} />
@@ -43,10 +43,10 @@ function Navbar() {
 
               <div className={styles.navbarbtn}>
                 <button className={styles.menuLoginX}>
-                  <Link to="/signin">Sign in</Link>
+                  <Link to="https://frontends-psi.vercel.app/signin">Sign in</Link>
                 </button>
                 <button className={styles.menuSignUpX}>
-                  <Link to="/joinnow">Sign Up</Link>
+                  <Link to="https://frontends-psi.vercel.app/joinnow">Sign Up</Link>
                 </button>
               </div>
             </div>

@@ -11,22 +11,22 @@ function LandingFooter() {
             <hr />
           </h2>
           <span>
-            <Link to="/about">About Us</Link>
+            <Link to="https://frontends-psi.vercel.app/about">About Us</Link>
           </span>
           <span>
-            <Link to="/press">Press Release</Link>
+            <Link to="https://frontends-psi.vercel.app/press">Press Release</Link>
           </span>
           <span>
-            <Link to="/diversity">Diversity, Equity & inclusion</Link>
+            <Link to="https://frontends-psi.vercel.app/diversity">Diversity, Equity & inclusion</Link>
           </span>
           <span>
-            <Link to="/coreValues">Our core values</Link>
+            <Link to="https://frontends-psi.vercel.app/coreValues">Our core values</Link>
           </span>
           <span>
-            <Link to="/contactUs">Contact Us</Link>
+            <Link to="https://frontends-psi.vercel.app/contactUs">Contact Us</Link>
           </span>
           <span>
-            <Link to="/how-it-works">How it works</Link>
+            <Link to="https://frontends-psi.vercel.app/how-it-works">How it works</Link>
           </span>
         </div>
         <div className={styles.products}>
@@ -34,31 +34,31 @@ function LandingFooter() {
             PRODUCTS <hr />
           </h2>
           <span>
-            <Link to="/signin">SOCIAL NETWORK</Link>
+            <Link to="https://frontends-psi.vercel.app/signin">SOCIAL NETWORK</Link>
           </span>
           <span>
-            <Link to="/travel">Travel and Tourism</Link>
+            <Link to="https://frontends-psi.vercel.app/travel">Travel and Tourism</Link>
           </span>
           <span>
-            <Link to="/learning">Learning and Coaching</Link>
+            <Link to="https://frontends-psi.vercel.app/learning">Learning and Coaching</Link>
           </span>
           <span>
-            <Link to="/food">Food and Restaurant</Link>
+            <Link to="https://frontends-psi.vercel.app/food">Food and Restaurant</Link>
           </span>
           <span>
-            <Link to="/artistic-shopping">Artistic Shopping</Link>
+            <Link to="https://frontends-psi.vercel.app/artistic-shopping">Artistic Shopping</Link>
           </span>
           <span>
-            <Link to="/digitalbanking">Digital Banking</Link>
+            <Link to="https://frontends-psi.vercel.app/digitalbanking">Digital Banking</Link>
           </span>
           <span>
-            <Link to="/tickets">Tickets & Events</Link>
+            <Link to="https://frontends-psi.vercel.app/tickets">Tickets & Events</Link>
           </span>
           <span>
-            <Link to="/entertainment">Entertainments & Experience</Link>
+            <Link to="https://frontends-psi.vercel.app/entertainment">Entertainments & Experience</Link>
           </span>
           <span>
-            <Link to="/moreproducts">More Products</Link>
+            <Link to="https://frontends-psi.vercel.app/moreproducts">More Products</Link>
           </span>
         </div>
         <div className={styles.others}>
@@ -67,25 +67,25 @@ function LandingFooter() {
             <hr />
           </h2>
           <span>
-            <Link to="/affiliate">Become An Affiliate</Link>
+            <Link to="https://frontends-psi.vercel.app/affiliate">Become An Affiliate</Link>
           </span>
           <span>
-            <Link to="/partnerdispute">Partner Dispute</Link>
+            <Link to="https://frontends-psi.vercel.app/partnerdispute">Partner Dispute</Link>
           </span>
           <span>
-            <Link to="/partnerhelp">Partner Help</Link>
+            <Link to="https://frontends-psi.vercel.app/partnerhelp">Partner Help</Link>
           </span>{" "}
           <span>
-            <Link to="/safety">Safety Resources Centre</Link>
+            <Link to="https://frontends-psi.vercel.app/safety">Safety Resources Centre</Link>
           </span>
           <span>
-            <Link to="/sustain">Sustainability</Link>
+            <Link to="https://frontends-psi.vercel.app/sustain">Sustainability</Link>
           </span>
           <span>
-            <Link to="/corporatecontacts">Corporate Contacts</Link>
+            <Link to="https://frontends-psi.vercel.app/corporatecontacts">Corporate Contacts</Link>
           </span>
           <span>
-            <Link to="/faq">F.A.Q </Link>
+            <Link to="https://frontends-psi.vercel.app/faq">F.A.Q </Link>
           </span>
         </div>
         <div className={styles.legal}>
@@ -94,16 +94,16 @@ function LandingFooter() {
             <hr />
           </h2>
           <span>
-            <Link to="/privacy">Privacy & Security</Link>
+            <Link to="https://frontends-psi.vercel.app/privacy">Privacy & Security</Link>
           </span>
           <span>
-            <Link to="/t&c">Terms & Condition</Link>
+            <Link to="https://frontends-psi.vercel.app/t&c">Terms & Condition</Link>
           </span>
           <span>
-            <Link to="/content">Content Guidelines & Reportage</Link>
+            <Link to="https://frontends-psi.vercel.app/content">Content Guidelines & Reportage</Link>
           </span>{" "}
           <span>
-            <Link to="/helpcentre">Help Centre</Link>
+            <Link to="https://frontends-psi.vercel.app/helpcentre">Help Centre</Link>
           </span>
         </div>
       </div>

@@ -17,7 +17,7 @@ function App() {
       <div className="App">
         <Routes>
           
-          <Route path="/" element={<LandingPage/>} />
+          <Route path="https://frontends-psi.vercel.app" element={<LandingPage/>} />
           <Route path="/signin" element={<SignIn/>}  />
           <Route path="/joinnow" element={<JoinNow />} />
           <Route path="/forgot" element={<ForgotPassword />} />

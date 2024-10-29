@@ -17,12 +17,12 @@ function NavJoin() {
   };
   return (
     <div className={styles.navbar}>
-      <Link to="/">
+      <Link to="https://frontends-psi.vercel.app">
         <img src={fatherLogo} alt="Fatherland Logo" />
       </Link>
       <div className={styles.navbarbtn}>
         <button className={styles.menuSignUp}>
-          <Link to="/signin">Sign In</Link>
+          <Link to="https://frontends-psi.vercel.app/signin">Sign In</Link>
         </button>
         {toggle ? (
           <FaBars className={styles.bars} onClick={handleBar} />
@@ -41,7 +41,7 @@ function NavJoin() {
 
               <div className={styles.navbarbtn}>
                 <button className={styles.menuLoginX}>
-                  <Link to="/signin">Sign in</Link>
+                  <Link to="https://frontends-psi.vercel.app/signin">Sign in</Link>
                 </button>
               </div>
             </div>

@@ -25,7 +25,6 @@ import UseLogOut from "../hooks/useLogOut";
 import useModal from "../hooks/useModal";
 import FooterLogin from "../footer/FooterLogin";
 function HomeProfile() {
- 
   const [emoji, setEmoji] = useState(false);
   const [chosenPicker, setChosenPicker] = useState("");
   const [message, setMessage] = useState("");
@@ -46,7 +45,8 @@ function HomeProfile() {
     fetch(`${baseUrl}/api_v1/profile/home/${_id}/${token}`, options)
       .then((res) => res.json())
       .then((data) => {
-        if (!data.token || !data.id) return navigate("/signin");
+        if (!data.token || !data.id)
+          return navigate("https://frontends-psi.vercel.app/signin");
       })
       .catch((err) => console.log(err.message));
   }, [user]);
@@ -61,11 +61,13 @@ function HomeProfile() {
     setEmoji(emoji);
   };
   //calling up openmodal hook to delete user profile
-  const [handleOpenModal, modal]= useModal();
+  const [handleOpenModal, modal] = useModal();
 
   //update users profile
   const handleEditProfile = () => {
-    navigate(`/resetpass/${user.email}/${token}`);
+    navigate(
+      `https://frontends-psi.vercel.app/resetpass/${user.email}/${token}`
+    );
   };
 
   return (
@@ -190,18 +192,54 @@ function HomeProfile() {
         <div className={styles.latestNews}>
           <div className={styles.latest}>
             <h3>latest news</h3>
-            <span><Link to={`/profile/news/${_id}/${token}`}>See more</Link></span>
+            <span>
+              <Link
+                to={`https://frontends-psi.vercel.app/profile/news/${_id}/${token}`}
+              >
+                See more
+              </Link>
+            </span>
           </div>
           <hr />
           <ul>
-          <li><FaDotCircle className={styles.dot}/>OPC: <b>The hit man of OPC was shot dead yesterday.</b></li>
-          <li><FaDotCircle className={styles.dot}/>Fatherland: <b>The chairman of Fatherland has today arrested the miscreants who buglarised the office and made away with 5 laptops.</b></li>
-          <li><FaDotCircle className={styles.dot}/>CBN: <b>The Central Bank of Nigeria is considering devaluating the naira</b></li>
-          <li><FaDotCircle className={styles.dot}/>ASUU: <b>The Academic Staff Union of Universities has approved the graduation of failed students who are partially blind</b></li>
-          <li><FaDotCircle className={styles.dot}/>USA: <b>The United State of America has threatened to sanction Nigeria over gay bill rejection.</b></li>
+            <li>
+              <FaDotCircle className={styles.dot} />
+              OPC: <b>The hit man of OPC was shot dead yesterday.</b>
+            </li>
+            <li>
+              <FaDotCircle className={styles.dot} />
+              Fatherland:{" "}
+              <b>
+                The chairman of Fatherland has today arrested the miscreants who
+                buglarised the office and made away with 5 laptops.
+              </b>
+            </li>
+            <li>
+              <FaDotCircle className={styles.dot} />
+              CBN:{" "}
+              <b>
+                The Central Bank of Nigeria is considering devaluating the naira
+              </b>
+            </li>
+            <li>
+              <FaDotCircle className={styles.dot} />
+              ASUU:{" "}
+              <b>
+                The Academic Staff Union of Universities has approved the
+                graduation of failed students who are partially blind
+              </b>
+            </li>
+            <li>
+              <FaDotCircle className={styles.dot} />
+              USA:{" "}
+              <b>
+                The United State of America has threatened to sanction Nigeria
+                over gay bill rejection.
+              </b>
+            </li>
           </ul>
         </div>
-        <FooterLogin/>
+        <FooterLogin />
       </div>
     </>
   );
