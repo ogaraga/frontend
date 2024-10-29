@@ -22,6 +22,7 @@ function LoginForm() {
     credentials: "include",
     headers: {
       "content-type": "application/json",
+      'Access-Control-Request-Headers': '*'
     },
     body: JSON.stringify({ email: value.email, password: value.password }),
   };
