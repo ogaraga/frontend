@@ -6,7 +6,7 @@ function UseLogOut() {
     const [state, setState] = useState(false);
     const [isLoading] = useLoading();
     const navigate =useNavigate();
-    const baseUrl = "https://backend-alpha-two-70.vercel.app/";  
+    const baseUrl = "https://backend-alpha-two-70.vercel.app";  
   
     const handleLogOut = async () => {
         await fetch(`${baseUrl}/api_v1/logout`, {
