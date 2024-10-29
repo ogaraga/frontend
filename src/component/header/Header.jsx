@@ -1,4 +1,4 @@
-import Navbar from "../navBar/Navbar";
+import Navbar from "../navBars/NavBar";
 import styles from "./Header.module.css";
 
 function Header() {

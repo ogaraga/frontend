@@ -1,5 +1,5 @@
 import styles from './Header.module.css'
-import NavLogOut from '../navbar/NavLogOut'
+import NavLogOut from "../navBars/NavLogOut";
 
 function HeaderLogOut() {
   return (
