@@ -3,6 +3,23 @@
     padding: 0;
     box-sizing: border-box;
 }
+.allContacts{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: aliceblue;
+}
+.otherinfo p{
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    font-family: 'poppins',sans-serif;
+}
+.otherinfo p span{
+    margin: 10px;
+    color: green;
+}
 .formcontainer{
     display: flex;
     align-items: center;
@@ -11,7 +28,6 @@
     width: 100vw;
     min-height: 100vh;
     margin: 20px auto;
-    background-color: aliceblue;
 }
 .formcontainer h1{
     text-transform: capitalize;

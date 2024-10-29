@@ -22,7 +22,7 @@ function NavLogin() {
     <img src={fatherLogo} alt="Fatherland Logo" /></Link>
       <div className={styles.navbarbtn}>
         <button className={styles.menuSignUp}>
-          <Link to="https://frontends-psi.vercel.app/joinnow">Sign Up</Link>
+          <Link to="/joinnow">Sign Up</Link>
         </button>
         {toggle ? (
           <FaBars className={styles.bars} onClick={handleBar} />
@@ -41,7 +41,7 @@ function NavLogin() {
 
               <div className={styles.navbarbtn}>
                 <button className={styles.menuSignUpX}>
-                  <Link to="https://frontends-psi.vercel.app/joinnow">Sign Up</Link>
+                  <Link to="/joinnow">Sign Up</Link>
                 </button>
               </div>
             </div>

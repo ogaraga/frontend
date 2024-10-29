@@ -30,12 +30,12 @@ function LandingPage() {
 
   //sign in to social networking room onclick
   const handleSocialSignin = () => {
-    navigate("https://frontends-psi.vercel.app/signin");
+    navigate("/signin");
   };
 
   //join any community onclick
   const handleExplore = () => {
-    navigate("https://frontends-psi.vercel.app/joinnow");
+    navigate("/joinnow");
   };
 
   
@@ -55,7 +55,7 @@ function LandingPage() {
           and foster meaningful connections. Discover a space where you can
           truly be yourself and embrace your community.
         </p>
-        <Link to="https://frontends-psi.vercel.app/joinnow"  className={styles.btnjoin}>
+        <Link to="/joinnow"  className={styles.btnjoin}>
           <button type="button" className={styles.Mbtn} >Join Community Now</button>
         </Link>
         <span className={styles.images}>
@@ -273,7 +273,7 @@ function LandingPage() {
             <b style={{ color: "green" }}>Connecting People.</b>{" "}
           </p>
           <button className={styles.oneStopBtn}>
-            <Link to="https://frontends-psi.vercel.app/joinnow">Become a member</Link>
+            <Link to="/joinnow">Become a member</Link>
           </button>
         </div>
         <div className={styles.image3}>

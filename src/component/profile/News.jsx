@@ -25,7 +25,7 @@ function News() {
       .then((res) => res.json())
       .then((data) => {
         if (!data.token || !data.id)
-          return navigate("https://frontends-psi.vercel.app/signin");
+          return navigate("/signin");
       })
       .catch((err) => console.log(err.message));
   }, [user]);

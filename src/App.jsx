@@ -23,7 +23,7 @@ function App() {
           <Route path="https://frontends-psi.vercel.app/forgot" element={<ForgotPassword />} />
           <Route path="https://frontends-psi.vercel.app/profile/:_id/:token" element={<Profile />}/>          
           <Route path="https://frontends-psi.vercel.app/resetpass/:email/:token" element={<ResetPass />}/>
-          <Route path="/profile/home/:_id/:token" element={<HomeProfile />}/>
+          <Route path="https://frontends-psi.vercel.app/profile/home/:_id/:token" element={<HomeProfile />}/>
           <Route path="https://frontends-psi.vercel.app/profile/news/:_id/:token" element={<News/>}/>
           <Route path="https://frontends-psi.vercel.app/contactUs" element={<ContactUs/>}/>
           <Route path="*" element ={<ErrorPage/>} />

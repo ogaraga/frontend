@@ -46,7 +46,7 @@ function HomeProfile() {
       .then((res) => res.json())
       .then((data) => {
         if (!data.token || !data.id)
-          return navigate("https://frontends-psi.vercel.app/signin");
+          return navigate("/signin");
       })
       .catch((err) => console.log(err.message));
   }, [user]);
@@ -66,7 +66,7 @@ function HomeProfile() {
   //update users profile
   const handleEditProfile = () => {
     navigate(
-      `https://frontends-psi.vercel.app/resetpass/${user.email}/${token}`
+      `/resetpass/${user.email}/${token}`
     );
   };
 
@@ -194,7 +194,7 @@ function HomeProfile() {
             <h3>latest news</h3>
             <span>
               <Link
-                to={`https://frontends-psi.vercel.app/profile/news/${_id}/${token}`}
+                to={`/profile/news/${_id}/${token}`}
               >
                 See more
               </Link>

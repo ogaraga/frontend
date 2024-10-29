@@ -26,9 +26,9 @@ function Profile() {
       .then((res) => res.json())
       .then((data) => {
         if (!data.token || !data.id) {
-          return navigate("https://frontends-psi.vercel.app/signin");
+          return navigate("/signin");
         } else {
-          return navigate(`https://frontends-psi.vercel.app/profile/${_id}/${token}`);
+          return navigate(`/profile/${_id}/${token}`);
         }
       })
       .catch((err) => alert(err.message));

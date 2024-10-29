@@ -55,6 +55,7 @@ function ContactUs() {
   return (
     <>
       <Header />
+      <div className={styles.allContacts}>
       <div className={styles.formcontainer}>
         <h1>Contact us form</h1>
         <form
@@ -103,7 +104,16 @@ function ContactUs() {
             {state ? "Sending Message..." : "Submit"}
           </button>
         </form>
+        
       </div>
+      <div className={styles.otherinfo}>
+          <p>You can also reach out to us through: 
+            <span>Email: raymond@fatherland.com</span>
+            <span>Website: https://fatherland.com || https://tulohinternational.com</span>
+            <span>Tel: +2348069304370</span>
+          </p>
+        </div>
+        </div>
       <FooterLogin />
     </>
   );

@@ -38,7 +38,7 @@ function LoginForm() {
           setState(isLoading);
           setTimeout(() => {
             alert("You are logged in!");
-            navigate(`https://frontends-psi.vercel.app/profile/${data._id}/${data.token}`);
+            navigate(`/profile/${data._id}/${data.token}`);
           }, 3000);
         } else {
           setState(isLoading);
@@ -87,12 +87,12 @@ function LoginForm() {
         </form>
         <div className={styles.laststat}>
           <span className={styles.forgot}>
-            <Link to="https://frontends-psi.vercel.app/forgot">Forgot Password?</Link>
+            <Link to="/forgot">Forgot Password?</Link>
           </span>
           <hr className={styles.loginHr} />
           <p className={styles.p2login}>
             <span className={styles.loginspan}>You dont have an account?</span>
-            <Link to="https://frontends-psi.vercel.app/joinnow">Sign Up</Link>
+            <Link to="/joinnow">Sign Up</Link>
           </p>
         </div>
       </div>

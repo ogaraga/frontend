@@ -54,19 +54,19 @@ function ProfileSubHeader() {
             <span>
               <FaHome />
               <li>
-                <Link to={`https://frontends-psi.vercel.app/profile/home/${_id}/${token}`}>Home</Link>
+                <Link to={`/profile/home/${_id}/${token}`}>Home</Link>
               </li>
             </span>
             <span>
               <FaPeopleCarry />
               <li>
-                <Link to={`https://frontends-psi.vercel.app/profile/comm/${_id}/${token}`}>Communities</Link>
+                <Link to={`/profile/comm/${_id}/${token}`}>Communities</Link>
               </li>
             </span>
             <span>
               <FaEnvelope />
               <li>
-                <Link to={`https://frontends-psi.vercel.app/profile/converse/${_id}/${token}`}>
+                <Link to={`/profile/converse/${_id}/${token}`}>
                   Conversations
                 </Link>
               </li>
@@ -74,7 +74,7 @@ function ProfileSubHeader() {
             <span>
               <FaBell />
               <li>
-                <Link to={`https://frontends-psi.vercel.app/profile/notify/${_id}/${token}`}>
+                <Link to={`/profile/notify/${_id}/${token}`}>
                   Notifications
                 </Link>
               </li>
@@ -83,14 +83,14 @@ function ProfileSubHeader() {
             <span>
               <FaEnvelope />
               <li>
-                <Link to={`https://frontends-psi.vercel.app/profile/message/${_id}/${token}`}>Message</Link>
+                <Link to={`/profile/message/${_id}/${token}`}>Message</Link>
               </li>
             </span>
 
             <span>
               <FaInfo />
               <li>
-                <Link to={`https://frontends-psi.vercel.app/profile/news/${_id}/${token}`}>News</Link>
+                <Link to={`/profile/news/${_id}/${token}`}>News</Link>
               </li>
             </span>
             <span> 

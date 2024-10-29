@@ -25,7 +25,7 @@ function Modal() {
           setText(isLoading);
           setTimeout(() => {
             alert("User deleted permanently!");
-            navigate("https://frontends-psi.vercel.app/signin");
+            navigate("/signin");
           }, 3000);
         } else {
           setText(isLoading);

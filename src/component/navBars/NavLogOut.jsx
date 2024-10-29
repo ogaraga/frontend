@@ -102,33 +102,33 @@ function NavLogOut() {
               <ul>
             <span>
               <FaHome />
-              <li><Link to={`https://frontends-psi.vercel.app/profile/home/${_id}/${token}`} >Home</Link></li>
+              <li><Link to={`profile/home/${_id}/${token}`} >Home</Link></li>
             </span>
             <span>
               <FaPeopleCarry />
-              <li><Link to={`https://frontends-psi.vercel.app/profile/comm/${_id}/${token}`} >Communities</Link></li>
+              <li><Link to={`/profile/comm/${_id}/${token}`} >Communities</Link></li>
             </span>
             <span>
               <FaEnvelope />
-              <li><Link to={`https://frontends-psi.vercel.app/profile/converse/${_id}/${token}`} >Conversations</Link></li>
+              <li><Link to={`/profile/converse/${_id}/${token}`} >Conversations</Link></li>
             </span>
             <span>
               <FaBell />
-              <li><Link to={`https://frontends-psi.vercel.app/profile/notify/${_id}/${token}`} >Notifications</Link></li>
+              <li><Link to={`/profile/notify/${_id}/${token}`} >Notifications</Link></li>
             </span>
             
             <span>
               <FaEnvelope />
-              <li><Link to={`https://frontends-psi.vercel.app/profile/message/${_id}/${token}`} >Message</Link></li>
+              <li><Link to={`/profile/message/${_id}/${token}`} >Message</Link></li>
             </span>
             
             <span>
               <FaInfo />
-              <li><Link to={`https://frontends-psi.vercel.app/profile/news/${_id}/${token}`} >News</Link></li>
+              <li><Link to={`/profile/news/${_id}/${token}`} >News</Link></li>
             </span>
             <span>
               <FaSearch />
-              <li><Link to={`https://frontends-psi.vercel.app/profile/explore/${_id}/${token}`} >Explore</Link></li>            </span>
+              <li><Link to={`/profile/explore/${_id}/${token}`} >Explore</Link></li>            </span>
           </ul>
         </div>      
               <FaXbox className={styles.xmark} onClick={handleRemove} />
