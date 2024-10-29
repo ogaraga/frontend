@@ -17,15 +17,15 @@ function App() {
       <div className="App">
         <Routes>
           
-          <Route path="https://frontends-psi.vercel.app" element={<LandingPage/>} />
-          <Route path="/signin" element={<SignIn/>}  />
-          <Route path="/joinnow" element={<JoinNow />} />
-          <Route path="/forgot" element={<ForgotPassword />} />
-          <Route path="/profile/:_id/:token" element={<Profile />}/>          
-          <Route path="/resetpass/:email/:token" element={<ResetPass />}/>
+          <Route path="/" element={<LandingPage/>} />
+          <Route path="https://frontends-psi.vercel.app/signin" element={<SignIn/>}  />
+          <Route path="https://frontends-psi.vercel.app/joinnow" element={<JoinNow />} />
+          <Route path="https://frontends-psi.vercel.app/forgot" element={<ForgotPassword />} />
+          <Route path="https://frontends-psi.vercel.app/profile/:_id/:token" element={<Profile />}/>          
+          <Route path="https://frontends-psi.vercel.app/resetpass/:email/:token" element={<ResetPass />}/>
           <Route path="/profile/home/:_id/:token" element={<HomeProfile />}/>
-          <Route path="/profile/news/:_id/:token" element={<News/>}/>
-          <Route path="/contactUs" element={<ContactUs/>}/>
+          <Route path="https://frontends-psi.vercel.app/profile/news/:_id/:token" element={<News/>}/>
+          <Route path="https://frontends-psi.vercel.app/contactUs" element={<ContactUs/>}/>
           <Route path="*" element ={<ErrorPage/>} />
         </Routes>
       </div>
