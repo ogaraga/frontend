@@ -1,7 +1,6 @@
 import {Route, Routes } from "react-router-dom";
 import "./App.css";
 import JoinNow from "./component/joinnow/JoinNow";
-import SignIn from "./component/signIn/SignIn";
 import SocialCard from "./component/socialcard/SocialCard";
 import ForgotPassword from "./component/forgot/ForgotPassword";
 import Profile from "./component/profile/Profile";
@@ -10,8 +9,8 @@ import ErrorPage from "./component/errorrouting/ErrorPage";
 import HomeProfile from "./component/profile/HomeProfile";
 import News from "./component/profile/News";
 import ContactUs from "./component/contactUs/ContactUs";
-
-
+import SignIn from "./component/signIn/SignIn";
+SignIn
 function App() {
   
   return (
