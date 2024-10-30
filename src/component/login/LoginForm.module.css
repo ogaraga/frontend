@@ -131,7 +131,7 @@
 .loginspan {
   width: 100%;
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 640px) {
   .login {
     width: 100vw;
     overflow-x: hidden;

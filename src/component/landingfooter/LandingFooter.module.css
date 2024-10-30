@@ -10,7 +10,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 .landfooter {
   position: relative;
@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: space-around;
   margin: 10px auto;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 .landfooter p {
@@ -167,7 +167,39 @@ margin: auto 15px;
   color: green;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 640px) {
+  .landingContainer {
+    top: 150px;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .company {
+    margin-left: 15px;
+    margin-top: 30px;
+  }
+  .others {
+    margin-left: 15px;
+    margin-top: 10px;
+  }
+  .legal {
+    margin-left: 15px;
+    margin-top: 10px;
+  }
+  .landfooter {
+    top: 138px;
+    bottom: 0px;
+    width: 100vw;
+    height: auto;
+  }
+  .landHr {
+    top:148px;
+    opacity: 0.6;
+  }
+}
+@media screen and (min-width: 780px) {
   .landingContainer {
     top: 150px;
     width: 100vw;

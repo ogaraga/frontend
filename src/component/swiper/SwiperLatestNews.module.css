@@ -80,7 +80,7 @@
 }
   
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 640px) {
   .mySwiper {
     width: 350px;
     height: auto;
@@ -88,7 +88,6 @@
   .paginationCards {
     top: 100px;
   }
-}
 .latNews {
   display: flex;
   align-items: center;
@@ -152,4 +151,5 @@
 .dot {
   font-size: 7px;
   margin: 3px;  
+}
 }
