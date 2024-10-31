@@ -48,7 +48,7 @@ function ResetPass() {
     await fetch(`${baseUrl}/api_v1/resetpass/${email}/${token}`, options)
       .then((res) => res.json())
       .then((data) => {
-        if (data.token || data.token === token) {
+        if (data.token || data.token === token && value.email === email) {
           setState(isLoading);
           setTimeout(() => {
             alert("Update successfully saved!");
