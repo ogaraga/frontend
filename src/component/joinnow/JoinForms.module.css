@@ -142,7 +142,7 @@
   text-decoration: underline;
   color: blue;
 }
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 640px){
   .join {
     width: 100vw;
     height: auto;

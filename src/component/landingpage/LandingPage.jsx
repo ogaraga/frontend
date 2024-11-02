@@ -24,8 +24,11 @@ import Header from "../header/Header";
 import avatabtn from "../assets/members (1).png";
 import Swiper from "../swiper/Swiper";
 import LandingFooter from "../landingfooter/LandingFooter";
+import { useEffect, useState } from "react";
+import Loader from "../loader/Loader";
 
 function LandingPage() {
+  const [loader,setLoader] = useState(true)
   const navigate = useNavigate();
 
   //sign in to social networking room onclick
@@ -38,8 +41,15 @@ function LandingPage() {
     navigate("/joinnow");
   };
 
+  useEffect(()=>{
+    setTimeout(() => {
+      setLoader(!loader)
+    }, 4000);
+  },[])
+
   return (
-    <>
+    <>    
+    {loader? <Loader/>:<>
       <Header />
       <main className={styles.mains}>
         <div className={styles.celebrating}>
@@ -293,7 +303,8 @@ function LandingPage() {
 
       <div className={styles.landFoot}>
         <LandingFooter />
-      </div>
+      </div></>}
+      
     </>
   );
 }

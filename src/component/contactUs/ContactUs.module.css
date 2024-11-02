@@ -98,7 +98,7 @@
 .contactForm textarea::-webkit-scrollbar{
     display: none;
 }
-@media screen and (max-width: 720px){
+@media screen and (max-width: 540px){
     .contactForm{
         max-width: 400px;
         width: 90%;

@@ -107,7 +107,7 @@
     margin: 3px;
    }
 
-   @media screen and (max-width:720px) {
+   @media screen and (max-width:640px) {
     .news{
         position: relative;
         top: 30px;
