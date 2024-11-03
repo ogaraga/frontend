@@ -277,7 +277,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   position: relative;
-  top: 600px;
+  top: 50px;
   margin: auto;
   border: 1px solid green;
   width: 300px;
@@ -307,9 +307,9 @@ a:hover {
   flex-direction: column;
   background-color: aliceblue;
   position: relative;
-  top: 650px;
+  top: 60px;
   max-width: 100vw;
-  width: auto;
+  width: 100%;
   height: 300px;
 }
 .deepSpan {
@@ -339,7 +339,7 @@ a:hover {
 .socialContainer {
   background-color: aliceblue;
   position: relative;
-  top: 500px;
+  top: 50px;
   max-width: auto;
   display: flex;
   align-items: center;
@@ -516,7 +516,9 @@ a:hover {
 /* section for one-stop community */
 .oneStopPlusImage {
   position: relative;
-  top: 550px;
+  top: 90px;
+  width: 100%;
+  height: 500px;
   background: url("../assets//main_landing_page_bg.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -525,10 +527,13 @@ a:hover {
   justify-content: space-between;
   margin: auto 0;
 }
+
 .oneStop {
   position: relative;
   text-transform: capitalize;
   font-family: "poppins", sans-serif;
+  max-width: 800px;
+  width: 100%;
   font-size: 20px;
   word-spacing: -2px;
   display: flex;
@@ -536,6 +541,7 @@ a:hover {
   align-items: stretch;
   justify-content: center;
   flex-direction: column;
+  top: -120px;
 }
 .oneStop h1 {
   text-align: start;
@@ -570,11 +576,16 @@ a:hover {
   text-decoration: underline;
 }
 .image3 img {
+  position: relative;
   width: 400px;
+  top: -100px;
+  left: 50%;
+  transform:translate(20%,-70%) ;
+  
 }
 .paginationContainer {
   position: relative;
-  top: 650px;
+  top: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -590,7 +601,7 @@ a:hover {
   text-align: center;
   margin: auto;
   position: relative;
-  top: 100px;
+  top: 300px;
 }
 
 .paginationHeading h1 b {
@@ -606,17 +617,17 @@ a:hover {
     overflow-x: hidden;
     max-width: 100vw;
     width: auto;
-    min-height: 300vh;
+    min-height: 100vh;
     height: 100%;
   }
-  body{
+  /* body{
     max-width: 100vw;
     width:90%;
     overflow-x: hidden;
     overflow-y: visible;
     margin: auto;
 
-  }
+  } */
   .celebrating {
     width: auto;
     margin: auto;
@@ -732,22 +743,24 @@ a:hover {
     margin: 15px auto;
   }
   .oneStopPlusImage {
-    top: 190px;
-    width: 100vw;
+    position: relative;
+    top: 250px;
+    width:100vw;
     height: 300px;
+    background: url("../assets//main_landing_page_bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
-
-    
+    justify-content: space-between;
+    margin: auto 0;    
   }
   .image3 {
     position: relative;
-    width: 200px;
+    width: 100px;
     height: 100%;
-    top: 130px;
-    left: 40%;
+    top: 300px;
+    left: 30%;
     transform: translate(-60%)
   }
   .paginationHeading{
@@ -756,17 +769,21 @@ a:hover {
     justify-content: center;
     flex-direction: column;
     position: relative;
-    top: 120px;
+    top: 0;
   }
-  
+  .oneStop{
+    top: -15%;
+    margin-top: 15px;
+  }
   .oneStop p {
     font-size: 13px;
     left: 50%;
     transform: translate(-20%);
-    text-align: center;
+    text-align: start;
   }
   .oneStop h1 {
-    text-align: center;
+    text-align: start;
+    width: auto;
     margin: auto;
     left: 50%;
     transform: translate(-20%);

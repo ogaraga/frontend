@@ -53,20 +53,22 @@
     
 }
 .mySwiper{
-    max-width: 1500px;
+    position: relative;
+    top: 450px;
+    max-width: 100vw;
     width: 100%;
     height: 100%;
 }
 
 @media screen and (max-width: 640px) {
     .mySwiper{
-        width: 450px;
+        width: 400px;
         height: auto;
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        
+        top: 20px;
     }
     .paginationCards{
         top: 200px;
@@ -83,7 +85,7 @@
     }
     
 }
-@media screen and (min-width: 780px) {
+/* @media screen and (min-width: 780px) {
     .mySwiper{
         max-width: 1500px;
         width: 100%;
@@ -112,4 +114,4 @@
         
     }
     
-}
+} */
