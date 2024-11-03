@@ -20,7 +20,7 @@ import useModal from "../hooks/useModal";
 function NavLogOut() {
     const [toggle, setToggle] = useState(true);
   const [activeNavBar, setActiveNavBar] = useState(false);
-  const {_id,token} = useParams();
+  const {_id,id} = useParams();
   const { user } = useContext(userContext);
   
   //calling up handleLogout hook
@@ -48,8 +48,8 @@ function NavLogOut() {
     }
   }
   useEffect(()=>{
-    fetch(`${baseUrl}/api_v1/profile/home/${_id}/${token}`,options).then(res=>res.json()).then(data=> console.log(data)).catch(err=>console.log(err.message))
-  },[user, _id, token])
+    fetch(`${baseUrl}/api_v1/profile/home/${_id}/${id}`,options).then(res=>res.json()).then(data=> console.log(data)).catch(err=>console.log(err.message))
+  },[user, _id, id])
 
   return (
     <>
@@ -106,11 +106,11 @@ function NavLogOut() {
             </span>
             <span>
               <FaPeopleCarry />
-              <li><Link to={`/profile/comm/${_id}/${token}`} >Communities</Link></li>
+              <li><Link to={`/profile/comm/${_id}/${id}`} >Communities</Link></li>
             </span>
             <span>
               <FaEnvelope />
-              <li><Link to={`/profile/converse/${_id}/${token}`} >Conversations</Link></li>
+              <li><Link to={`/profile/converse/${_id}/${id}`} >Conversations</Link></li>
             </span>
             <span>
               <FaBell />
@@ -119,16 +119,16 @@ function NavLogOut() {
             
             <span>
               <FaEnvelope />
-              <li><Link to={`/profile/message/${_id}/${token}`} >Message</Link></li>
+              <li><Link to={`/profile/message/${_id}/${id}`} >Message</Link></li>
             </span>
             
             <span>
               <FaInfo />
-              <li><Link to={`/profile/news/${_id}/${token}`} >News</Link></li>
+              <li><Link to={`/profile/news/${_id}/${id}`} >News</Link></li>
             </span>
             <span>
               <FaSearch />
-              <li><Link to={`/profile/explore/${_id}/${token}`} >Explore</Link></li>            </span>
+              <li><Link to={`/profile/explore/${_id}/${id}`} >Explore</Link></li>            </span>
           </ul>
         </div>      
               <FaXbox className={styles.xmark} onClick={handleRemove} />

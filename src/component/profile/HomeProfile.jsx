@@ -29,7 +29,7 @@ function HomeProfile() {
   const [chosenPicker, setChosenPicker] = useState("");
   const [message, setMessage] = useState("");
   const { user } = useContext(userContext);
-  const { _id, token } = useParams();
+  const { _id, id } = useParams();
   const navigate = useNavigate();
   const [handleLogOut, state] = UseLogOut();
   const baseUrl = "https://backend-alpha-two-70.vercel.app";
@@ -42,7 +42,7 @@ function HomeProfile() {
   };
   //to monitor users presence on site
   useEffect(() => {
-    fetch(`${baseUrl}/api_v1/profile/home/${_id}/${token}`, options)
+    fetch(`${baseUrl}/api_v1/profile/home/${_id}/${id}`, options)
       .then((res) => res.json())
       .then((data) => {
         if (!data.token || !data.id)
@@ -66,7 +66,7 @@ function HomeProfile() {
   //update users profile
   const handleEditProfile = () => {
     navigate(
-      `/resetpass/${user.email}/${token}`
+      `/resetpass/${user.email}/${id}`
     );
   };
 
@@ -194,7 +194,7 @@ function HomeProfile() {
             <h3>latest news</h3>
             <span>
               <Link
-                to={`/profile/news/${_id}/${token}`}
+                to={`/profile/news/${_id}/${id}`}
               >
                 See more
               </Link>

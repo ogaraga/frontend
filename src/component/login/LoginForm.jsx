@@ -16,7 +16,7 @@ function LoginForm() {
   const [handleReveal, reveal] = useRevealPassword();
   const { setUser } = useContext(userContext);
   const navigate = useNavigate();
-  const baseUrl = "https://backend-alpha-two-70.vercel.app";
+  const baseUrl = "http://localhost:8080";
   const options = {
     method: "POST",
     credentials: "include",
@@ -38,7 +38,7 @@ function LoginForm() {
           setState(isLoading);
           setTimeout(() => {
             alert("You are logged in!");
-            navigate(`/profile/${data._id}/${data.token}`);
+            navigate(`/profile/${data._id}/${data.id}`);
           }, 3000);
         } else {
           setState(isLoading);

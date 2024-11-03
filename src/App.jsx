@@ -21,10 +21,10 @@ function App() {
           <Route path="/signin" element={<SignIn/>}  />
           <Route path="/joinnow" element={<JoinNow />} />
           <Route path="/forgot" element={<ForgotPassword />} />
-          <Route path="/profile/:_id/:token" element={<Profile />}/>          
+          <Route path="/profile/:_id/:id" element={<Profile />}/>          
           <Route path="/resetpass/:email/:token" element={<ResetPass />}/>
-          <Route path="/profile/home/:_id/:token" element={<HomeProfile />}/>
-          <Route path="/profile/news/:_id/:token" element={<News/>}/>
+          <Route path="/profile/home/:_id/:id" element={<HomeProfile />}/>
+          <Route path="/profile/news/:_id/:id" element={<News/>}/>
           <Route path="/contactUs" element={<ContactUs/>}/>
           <Route path="*" element ={<ErrorPage/>} />
         </Routes>

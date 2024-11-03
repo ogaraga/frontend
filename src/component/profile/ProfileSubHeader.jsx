@@ -18,7 +18,7 @@ import { Link, useParams } from "react-router-dom";
 import Explore from "./Explore";
 function ProfileSubHeader() {
   const [open, setOpen] = useState(true);
-  const { _id, token } = useParams();
+  const { _id, id } = useParams();
   const { user } = useContext(userContext);
   const baseUrl = "https://backend-alpha-two-70.vercel.app";
   const options = {
@@ -29,11 +29,11 @@ function ProfileSubHeader() {
     },
   };
   useEffect(() => {
-    fetch(`${baseUrl}/api_v1/profile/home/${_id}/${token}`, options)
+    fetch(`${baseUrl}/api_v1/profile/home/${_id}/${id}`, options)
       .then((res) => res.json())
       .then((data) => console.log(data))
       .catch((err) => console.log(err.message));
-  }, [user, _id, token]);
+  }, [user, _id, id]);
 
   const handleSearch = () => {
     setOpen(!open);
@@ -54,19 +54,19 @@ function ProfileSubHeader() {
             <span>
               <FaHome />
               <li>
-                <Link to={`/profile/home/${_id}/${token}`}>Home</Link>
+                <Link to={`/profile/home/${_id}/${id}`}>Home</Link>
               </li>
             </span>
             <span>
               <FaPeopleCarry />
               <li>
-                <Link to={`/profile/comm/${_id}/${token}`}>Communities</Link>
+                <Link to={`/profile/comm/${_id}/${id}`}>Communities</Link>
               </li>
             </span>
             <span>
               <FaEnvelope />
               <li>
-                <Link to={`/profile/converse/${_id}/${token}`}>
+                <Link to={`/profile/converse/${_id}/${id}`}>
                   Conversations
                 </Link>
               </li>
@@ -74,7 +74,7 @@ function ProfileSubHeader() {
             <span>
               <FaBell />
               <li>
-                <Link to={`/profile/notify/${_id}/${token}`}>
+                <Link to={`/profile/notify/${_id}/${id}`}>
                   Notifications
                 </Link>
               </li>
@@ -83,14 +83,14 @@ function ProfileSubHeader() {
             <span>
               <FaEnvelope />
               <li>
-                <Link to={`/profile/message/${_id}/${token}`}>Message</Link>
+                <Link to={`/profile/message/${_id}/${id}`}>Message</Link>
               </li>
             </span>
 
             <span>
               <FaInfo />
               <li>
-                <Link to={`/profile/news/${_id}/${token}`}>News</Link>
+                <Link to={`/profile/news/${_id}/${id}`}>News</Link>
               </li>
             </span>
             <span> 

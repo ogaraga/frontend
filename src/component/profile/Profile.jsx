@@ -8,7 +8,7 @@ import HomeProfile from "./HomeProfile";
 
 
 function Profile() {
-  const { _id, token } = useParams();
+  const { _id, id } = useParams();
 
 
   const baseUrl = "https://backend-alpha-two-70.vercel.app";
@@ -16,7 +16,7 @@ function Profile() {
   const navigate = useNavigate();
 
   const profile = async () => {
-    await fetch(`${baseUrl}/api_v1/profile/${_id}/${token}`, {
+    await fetch(`${baseUrl}/api_v1/profile/${_id}/${id}`, {
       method: "GET",
       credentials: "include",
       headers: {
@@ -28,14 +28,14 @@ function Profile() {
         if (!data.token || !data.id) {
           return navigate("/signin");
         } else {
-          return navigate(`/profile/${_id}/${token}`);
+          return navigate(`/profile/${data_id}/${data.id}`);
         }
       })
       .catch((err) => alert(err.message));
   };
   useEffect(() => {
     profile();
-  }, [_id, token]);
+  }, [_id, id]);
 
   return (
     <>
