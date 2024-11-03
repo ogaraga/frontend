@@ -288,7 +288,7 @@
     display: flex;
     position: absolute;
     top: 0;
-    left: 50%;
+    left: 30%;
     width: 100%;
     align-items: center;
     background-color: aliceblue;
@@ -310,22 +310,19 @@
     height: 500px;
     gap: 10px;
   }
-  .menuSignUpX,
-  .menuLoginX {
-    padding: 10px;
-    position: absolute;
-    left: 30%;
-    transform: translate(-50%,-5%);
-    top: 10%;
-    width: 100px;
-    cursor: pointer;
-  }
-
+  
   .menuSignUpX a,
   .menuLoginX a {
     text-decoration: none;
   }
-  .menuSignUpX {
+  .menuSignUpX {    
+    padding: 10px;
+    position: absolute;
+    right: 25%;
+    transform: translate(-50%,-5%);
+    top: 10%;
+    width: 100px;
+    cursor: pointer;
     font-weight: 600px;
     width: 100px;
     text-align: center;
@@ -334,7 +331,14 @@
     cursor: pointer;
     outline: none;
   }
-  .menuLoginX {
+  .menuLoginX {    
+    padding: 10px;
+    position: absolute;
+    left: 20%;
+    transform: translate(-50%,-5%);
+    top: 10%;
+    width: 100px;
+    cursor: pointer;
     font-weight: 600px;
     width: 100px;
     text-align: center;

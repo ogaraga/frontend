@@ -18,19 +18,20 @@ import image8 from "../assets/eight.png";
 import image9 from "../assets/nine.png";
 import image10 from "../assets/ten.png";
 import imageOf3 from "../assets/afrocentric_bg.png";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
 import Header from "../header/Header";
 import avatabtn from "../assets/members (1).png";
 import Swiper from "../swiper/Swiper";
 import LandingFooter from "../landingfooter/LandingFooter";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Loader from "../loader/Loader";
-
+import UserContext from '../context/UserContext';
 function LandingPage() {
   const [loader,setLoader] = useState(true)
   const navigate = useNavigate();
-
+const {user} = useContext(UserContext);
+const {_id,token} = useParams();
   //sign in to social networking room onclick
   const handleSocialSignin = () => {
     navigate("/signin");
@@ -42,9 +43,13 @@ function LandingPage() {
   };
 
   useEffect(()=>{
+    if(user.session){
+      navigate(`/profile/${_id}/${token}`)
+    }else{
     setTimeout(() => {
       setLoader(!loader)
     }, 4000);
+  }
   },[])
 
   return (
