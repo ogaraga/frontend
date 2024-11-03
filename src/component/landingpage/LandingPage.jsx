@@ -47,7 +47,7 @@ function LandingPage() {
     })
       .then((res) => res.json())
       .then((data) => {
-        if (!data._id || !data.id || user) {
+        if (!data._id || !data.id || !user) {
           console.log(data.id, data._id)
           setTimeout(() => {
             setLoader(!loader);
