@@ -1,6 +1,6 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import styles from "./LoginForm.module.css";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import userContext from "../context/UserContext";
 import useLoading from "../hooks/useLoading";
 import { FaEye } from "react-icons/fa";
@@ -10,6 +10,7 @@ function LoginForm() {
     email: "",
     password: "",
   });
+  const [loader, setLoader] = useState(true);
   const {user} = useContext(userContext);
   const[state, setState] = useState();
   const [isLoading] = useLoading();
@@ -50,9 +51,35 @@ function LoginForm() {
       })
       .catch((err) => alert(err.message))
   };
-
+  const {_id, id} = useParams();
+  const getProfile = async () => {
+    await fetch(`${baseUrl}/api_v1/profile/${_id}/${id}`, {
+      method: "GET",
+      credentials: "include",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (!data._id || !data.id) {
+          console.log(data.id, data._id)
+          setTimeout(() => {
+            setLoader(!loader);
+          }, 4000);
+          return navigate("/signin");
+        } else {
+          return navigate(`/profile/${data._id}/${data.id}`);
+        }
+      })
+      .catch((err) => alert(err.message));
+  };
+  useEffect(()=>{
+    getProfile()
+  },[user, id, _id])
   return (
     <>
+    
       <div className={styles.login}>
         <h4 className={styles.h4login}>Log In</h4>
         <p className={styles.plogin}>Welcome back! Glad to see you again.</p>

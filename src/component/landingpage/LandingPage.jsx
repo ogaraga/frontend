@@ -30,6 +30,7 @@ import UserContext from "../context/UserContext";
 function LandingPage() {
   const [loader, setLoader] = useState(true);
   const navigate = useNavigate();
+  const { user } = useContext(UserContext);
   const { _id, id  } = useParams();
   //sign in to social networking room onclick
   const handleSocialSignin = () => {
@@ -46,7 +47,7 @@ function LandingPage() {
     })
       .then((res) => res.json())
       .then((data) => {
-        if (!data._id || !data.id) {
+        if (!data._id || !data.id || !user) {
           console.log(data.id, data._id)
           setTimeout(() => {
             setLoader(!loader);
@@ -66,7 +67,7 @@ function LandingPage() {
 
   useEffect(() => {
     getProfile();
-  }, []);
+  }, [user, id, _id]);
 
   return (
     <>

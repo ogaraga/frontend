@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import styles from "./JoinForms.module.css";
 import { useContext, useState } from "react";
 import useLoading from "../hooks/useLoading";
@@ -22,6 +22,7 @@ function JoinForms() {
   // consume usehook for loading and password reveal
   const [isLoading] = useLoading();
   const [handleReveal, reveal] = useRevealPassword();
+  const {_id, id} = useParams();
   const navigate = useNavigate();
   const baseUrl = "https://backend-alpha-two-70.vercel.app";
   const options = {
@@ -63,6 +64,31 @@ function JoinForms() {
       })
       .catch((err) => alert(err.message));
   };
+  const getProfile = async () => {
+    await fetch(`${baseUrl}/api_v1/profile/${_id}/${id}`, {
+      method: "GET",
+      credentials: "include",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (!data._id || !data.id) {
+          console.log(data.id, data._id)
+          setTimeout(() => {
+            setLoader(!loader);
+          }, 4000);
+          return navigate("/signin");
+        } else {
+          return navigate(`/profile/${data._id}/${data.id}`);
+        }
+      })
+      .catch((err) => alert(err.message));
+  };
+  useEffect(()=>{
+    getProfile()
+  },[user, id, _id])
   return (
     <div className={styles.join}>
       <h4 className={styles.h4join}>Create Your Account</h4>
