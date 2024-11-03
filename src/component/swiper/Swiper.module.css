@@ -1,6 +1,6 @@
 .paginationCards{
     position: relative;
-    top: 600px;
+    top: 350px;
     max-width: 1300px;
     width: 100%;
     height: 400px;
@@ -33,9 +33,7 @@
     font-family: 'poppins', sans-serif;
     margin: 10px;
 }
-.paginationCards .span:hover{
-    border-top-right-radius: calc(40%);
-}
+
 .paginationCards .span:hover em{
     background-color: blue;
     color: white;
@@ -54,7 +52,7 @@
 }
 .mySwiper{
     position: relative;
-    top: 450px;
+    top: 0px;
     max-width: 100vw;
     width: 100%;
     height: 100%;
