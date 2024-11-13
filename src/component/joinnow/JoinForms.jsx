@@ -74,15 +74,8 @@ function JoinForms() {
     })
       .then((res) => res.json())
       .then((data) => {
-        if (!data._id || !data.id) {
-          console.log(data.id, data._id)
-          setTimeout(() => {
-            setLoader(!loader);
-          }, 4000);
-          return navigate("/signin");
-        } else {
-          return navigate(`/profile/${data._id}/${data.id}`);
-        }
+        if (data._id || data.id)      
+          return navigate(`/profile/${data._id}/${data.id}`);      
       })
       .catch((err) => alert(err.message));
   };

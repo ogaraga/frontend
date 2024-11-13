@@ -47,15 +47,8 @@ function LandingPage() {
     })
       .then((res) => res.json())
       .then((data) => {
-        if (!data._id || !data.id || !user) {
-          console.log(data.id, data._id)
-          setTimeout(() => {
-            setLoader(!loader);
-          }, 4000);
-          return navigate("/");
-        } else {
-          return navigate(`/profile/${data._id}/${data.id}`);
-        }
+        if (data._id || data.id || user)          
+          return navigate(`/profile/${data._id}/${data.id}`);     
       })
       .catch((err) => alert(err.message));
   };
