@@ -1,6 +1,6 @@
 import { Link, useNavigate, useParams } from "react-router-dom";
 import styles from "./JoinForms.module.css";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import useLoading from "../hooks/useLoading";
 import useRevealPassword from "../hooks/useRevealPassword";
 import { FaEye } from "react-icons/fa";
