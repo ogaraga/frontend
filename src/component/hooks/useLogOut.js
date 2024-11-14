@@ -9,6 +9,7 @@ function UseLogOut() {
     const baseUrl = "https://backend-alpha-two-70.vercel.app";  
   
     const handleLogOut = async () => {
+        setState(isLoading);
         await fetch(`${baseUrl}/api_v1/logout`, {
             method: "GET",
             credentials: "include",
@@ -18,21 +19,19 @@ function UseLogOut() {
         })
             .then((res) => res.json())
             .then((data) => {
-                if (data === "You are logged out!") {
-                    setState(isLoading);
+                if (data === "You are logged out!") {                    
                     setTimeout(() => {
                         alert(data);
                         navigate("/signin");
                     }, 3000);
                 } else {
-                    setState(isLoading);
                     setTimeout(() => {
-                        alert("LogOut failled!");
-                        setState(!isLoading);
+                        alert("LogOut failled!");                      
                     }, 3000);
                 }
             })
-            .catch((error) => alert(error.message));
+            .catch((error) => alert(error.message))
+            .finally(()=>setState(!isLoading))
     };
     return [handleLogOut, state]
 }

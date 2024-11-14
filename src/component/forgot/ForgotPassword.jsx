@@ -22,24 +22,23 @@ function ForgotPassword() {
   };
   const handleSend = async (ev) => {
     ev.preventDefault();
+    setState(isLoading);
     await fetch(`${baseUrl}/api_v1/forgot`, options)
       .then((res) => res.json())
       .then((data) => {
         if (data.token || data.email) {
-          setState(isLoading)
           setTimeout(() => {
             alert(`Reset Link sent to ${email}.`);
             navigate("/signin");
           }, 3000);
         } else {
-          setState(isLoading)
           setTimeout(() => {
-            alert(data);            
-          setState(!isLoading)
+            alert(data);      
           }, 3000);
         }
       })
-      .catch((error) => alert(error.message));
+      .catch((error) => alert(error.message))
+      .finally(()=>setState(!isLoading))
   };
   const onChangeSend = (ev) => {
     setEmail(ev.target.value);

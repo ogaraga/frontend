@@ -31,25 +31,25 @@ function LoginForm() {
   };
   const handleSubmit = async (ev) => {
     ev.preventDefault();
+    setState(isLoading);
     setUser({ email: value.email });
     await fetch(`${baseUrl}/api_v1/signin`, options)
       .then((res) => res.json())
       .then((data) => {
         if (data.token || data.id) {
-          setState(isLoading);
+         
           setTimeout(() => {
             alert("You are logged in!");
             navigate(`/profile/${data._id}/${data.id}`);
           }, 3000);
         } else {
-          setState(isLoading);
           setTimeout(() => {
             alert(data);
-            setState(!isLoading);
           }, 3000);
         }
       })
       .catch((err) => alert(err.message))
+      .finally(()=>setState(!isLoading))
   };
   const {_id, id} = useParams();
   const getProfile = async () => {

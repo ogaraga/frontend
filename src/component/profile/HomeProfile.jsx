@@ -142,7 +142,7 @@ function HomeProfile() {
               </p>
             </details>
             {state ? (
-              "Logging out..."
+              "Exiting..."
             ) : (
               <span
                 style={{ fontWeight: "bold", margin: "20px" }}

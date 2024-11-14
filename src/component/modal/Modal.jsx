@@ -12,6 +12,7 @@ function Modal() {
   
   const navigate = useNavigate();
   const handleYes = async () => {
+    setText(isLoading);
     await fetch(`${baseUrl}/api_v1/profile/${_id}/${token}`, {
       method: "DELETE",
       headers: {
@@ -22,20 +23,19 @@ function Modal() {
       .then((res) => res.json())
       .then((data) => {
         if (data === `User with Id: ${_id}, and token: ${token}, deleted!`) {
-          setText(isLoading);
+         
           setTimeout(() => {
             alert("User deleted permanently!");
             navigate("/signin");
           }, 3000);
         } else {
-          setText(isLoading);
           setTimeout(() => {
             alert(data);
-            setText(!isLoading);
           }, 3000);
         }
       })
-      .catch((error) => alert(error.message));
+      .catch((error) => alert(error.message))
+      .finally(()=>setText(!isLoading))
   };
   return (
     <>

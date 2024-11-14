@@ -45,24 +45,24 @@ function JoinForms() {
   };
   const handleSubmit = async (ev) => {
     ev.preventDefault();
+    setState(isLoading);
     await fetch(`${baseUrl}/api_v1/joinnow`, options)
       .then((res) => res.json())
       .then((data) => {
         if (data === "User registration successful!") {
-          setState(isLoading);
+        
           setTimeout(() => {
             alert("User successfully registered!");
             navigate("/signin");
           }, 3000);
         } else {
-          setState(isLoading);
           setTimeout(() => {
             alert(data);
-            setState(!isLoading);
           }, 3000);
         }
       })
-      .catch((err) => alert(err.message));
+      .catch((err) => alert(err.message))
+      .finally(()=>setState(!isLoading))
   };
   const getProfile = async () => {
     await fetch(`${baseUrl}/api_v1/profile/${_id}/${id}`, {

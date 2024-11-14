@@ -45,11 +45,11 @@ function ResetPass() {
   //   send or submit your request by a click
   const handleSubmit = async (ev) => {
     ev.preventDefault();
+    setState(isLoading);
     await fetch(`${baseUrl}/api_v1/resetpass/${email}/${token}`, options)
       .then((res) => res.json())
       .then((data) => {
-        if (data.token && data.token === token && {email:value.email === email}) {
-          setState(isLoading);
+        if (data.token && data.token === token && {email:value.email === email}) {         
           setTimeout(() => {
             alert("Update successfully saved!");
             navigate("/signin");
@@ -58,20 +58,20 @@ function ResetPass() {
           data ===
           "This user is not in the database; you are now being redirected to create an account"
         ) {
-          setState(isLoading);
+         
           setTimeout(() => {
             alert(data);
             navigate("/joinnow");
           }, 3000);
         } else {
-          setState(isLoading);
+          
           setTimeout(() => {
             alert(data);
-            setState(!isLoading);
           }, 3000);
         }
       })
-      .catch((err) => alert(err.message));
+      .catch((err) => alert(err.message))
+      .finally(()=>setState(!isLoading))
   };
   return (
     <>
@@ -123,7 +123,7 @@ function ResetPass() {
             onChange={onChangeSend}
           />
 
-          <button type="submit">{state? 'Resetting & updating...': 'Reset'}</button>
+          <button type="submit">{state? 'Resetting & Updating...': 'Reset'}</button>
           <FooterJoin />
         </form>
       </div>
