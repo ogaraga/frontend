@@ -24,44 +24,23 @@ import Header from "../header/Header";
 import avatabtn from "../assets/members (1).png";
 import Swiper from "../swiper/Swiper";
 import LandingFooter from "../landingfooter/LandingFooter";
-import { useContext, useEffect, useState } from "react";
+import {useState } from "react";
 import Loader from "../loader/Loader";
-import UserContext from "../context/UserContext";
 function LandingPage() {
   const [loader, setLoader] = useState(true);
   const navigate = useNavigate();
-  const { user } = useContext(UserContext);
-  const { _id, id  } = useParams();
+
   //sign in to social networking room onclick
   const handleSocialSignin = () => {
     navigate("/signin");
   };
-  const baseUrl = "https://backend-alpha-two-70.vercel.app";
-  const getProfile = async () => {
-    await fetch(`${baseUrl}/api_v1/profile/${_id}/${id}`, {
-      method: "GET",
-      credentials: "include",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data._id || data.id)          
-          return navigate(`/profile/${data._id}/${data.id}`);     
-      })
-      .catch((err) => alert(err.message));
-  };
-
+  
   //join any community onclick
   const handleExplore = () => {
     navigate("/joinnow");
   };
 
-  useEffect(() => {
-    getProfile();
-  }, [user, id, _id]);
-
+  
   return (
     <>
       {loader ? (
