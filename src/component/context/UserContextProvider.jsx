@@ -3,11 +3,11 @@ import UserContext from "./UserContext";
 
 const UserContextProvider = ({ children }) => {
   const [user, setUser] = useState(() => {
-    const savedUserEmail = localStorage.getItem("user");
+    const savedUserEmail = localStorage.getItem("");
     return savedUserEmail? JSON.parse(savedUserEmail) : {user: ''}});
 
   useEffect(() => {
-    localStorage.setItem("user", JSON.stringify(user));
+    localStorage.setItem("", JSON.stringify(user));
   }, [user]);
   return (
     <UserContext.Provider value={{ user, setUser }}>
