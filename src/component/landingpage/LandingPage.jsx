@@ -24,7 +24,7 @@ import Header from "../header/Header";
 import avatabtn from "../assets/members (1).png";
 import Swiper from "../swiper/Swiper";
 import LandingFooter from "../landingfooter/LandingFooter";
-import {useState } from "react";
+import {useEffect, useState } from "react";
 import Loader from "../loader/Loader";
 function LandingPage() {
   const [loader, setLoader] = useState(true);
@@ -39,7 +39,11 @@ function LandingPage() {
   const handleExplore = () => {
     navigate("/joinnow");
   };
-
+useEffect(()=>{
+  setTimeout(() => {
+    setLoader(!loader)
+  }, 3000);
+},[])
   
   return (
     <>
