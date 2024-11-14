@@ -51,7 +51,7 @@ function ContactUs() {
         }
       })
       .catch((err) => alert(err.message))
-      .finally(isLoading);
+      .finally(()=>setState(!isLoading));
   };
   return (
     <>
