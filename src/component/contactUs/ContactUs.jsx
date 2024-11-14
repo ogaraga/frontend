@@ -46,7 +46,6 @@ function ContactUs() {
         } else {
           setTimeout(() => {
             alert(data);
-            setState(!isLoading);
           }, 3000);
         }
       })
