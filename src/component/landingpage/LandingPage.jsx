@@ -47,7 +47,7 @@ function LandingPage() {
     })
       .then((res) => res.json())
       .then((data) => {
-        if (data._id || data.id || user)          
+        if (data._id || data.id)          
           return navigate(`/profile/${data._id}/${data.id}`);     
       })
       .catch((err) => alert(err.message));
