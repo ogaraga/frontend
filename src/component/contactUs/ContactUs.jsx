@@ -50,7 +50,8 @@ function ContactUs() {
           }, 3000);
         }
       })
-      .catch((err) => alert(err.message));
+      .catch((err) => alert(err.message))
+      .finally(setState(isLoading));
   };
   return (
     <>
